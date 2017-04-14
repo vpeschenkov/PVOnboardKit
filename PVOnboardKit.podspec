@@ -5,8 +5,8 @@ Pod::Spec.new do |spec|
   spec.license          = { :type => 'MIT' }
   spec.homepage         = 'https://github.com/vpeschenkov/PVOnboardKit.git'
   spec.authors          = { 'Peschenkov Victor' => 'nerevarxx@gmail.com' }
-  spec.summary          = 'PVOnboardKit'
-  spec.source           = { :git => 'https://github.com/vpeschenkov/PVOnboardKit.git', :tag => spec.version }
+  spec.summary          = 'Make an app tutorial as easy as it is possible!'
+  spec.source           = { :git => 'https://github.com/vpeschenkov/PVOnboardKit.git', :tag => spec.version.to_s }
   spec.source_files     = 'PVOnboardKit/{PV}*.{h,m}'
   spec.requires_arc     = true
   spec.dependency 'TAPageControl'
