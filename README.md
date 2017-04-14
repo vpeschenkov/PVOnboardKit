@@ -30,7 +30,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 ## Objective-C
 
 ### Delegate
-```
+```obj-c
 @optional
 /**
  *  Called when a user did touch on the left action button.
@@ -41,7 +41,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
 ```
 
-```
+```obj-c
 @optional
 /**
  *  Called when a user did touch on the right action button.
@@ -53,7 +53,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 ```
 
 ### DataSource
-```
+```obj-c
 @required
 /**
  *  Requests a number of pages in a current onboard.
@@ -64,7 +64,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView;
 ```
 
-```
+```obj-c
 @required
 /**
  *  Requests a page view for the page at index.
@@ -76,7 +76,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index;
 ```
 
-```
+```obj-c
 @optional
 /**
  *  Requests a visible state for the right action button for page at index.
@@ -88,7 +88,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideRightActionButtonForPageAtIndex:(NSInteger)index;
 ```
 
-```
+```obj-c
 @optional
 /**
  *  Requests a title for the right action button for page at index.
@@ -100,7 +100,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForRightActionButtonAtIndex:(NSInteger)index;
 ```
 
-```
+```obj-c
 @optional
 /**
  *  Requests a visible state for the left action button for page at index.
@@ -112,7 +112,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideLeftActionButtonForPageAtIndex:(NSInteger)index;
 ```
 
-```
+```obj-c
 @optional
 /**
  *  Requests a title for the left action button for page at index.
