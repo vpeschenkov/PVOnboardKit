@@ -3,7 +3,7 @@ Make any app tutorial **as easy as possible**😎❕
 
 **PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses **UITableView**. 
 
-Also, for more customizations [PVOnboardKit](https://github.com/vpeschenkov/PVOnboardKit) uses [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) instead of [UIPageControl](https://developer.apple.com/reference/uikit/uipagecontrol).
+Also, for more customization [PVOnboardKit](https://github.com/vpeschenkov/PVOnboardKit) uses [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) instead of [UIPageControl](https://developer.apple.com/reference/uikit/uipagecontrol).
 
 # Task Lists
 - [ ] Add to [CocoaPods Specs](https://github.com/CocoaPods/Specs)
@@ -130,7 +130,7 @@ Thank @TanguyAladenise for [TAPageControl](https://github.com/TanguyAladenise/TA
 
 # Community
 
-Questions, comments, issues, and pull requests welcomed😄❕
+Questions, comments, issues, and pull requests are always welcome😄❕
 
 # License
 
