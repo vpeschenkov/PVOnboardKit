@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		ADD1B40EE6DDE72302240190 /* Pods_PVOnboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA36414062E410A21ECBA8A4 /* Pods_PVOnboardKit.framework */; };
 		F20F55DA1EA118BB003DB186 /* PVOnboardKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55D81EA118BB003DB186 /* PVOnboardKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F20F55E91EA11A18003DB186 /* PVOnboardPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E61EA11A18003DB186 /* PVOnboardPage.h */; };
-		F20F55EA1EA11A18003DB186 /* PVOnboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E71EA11A18003DB186 /* PVOnboardView.h */; };
+		F20F55E91EA11A18003DB186 /* PVOnboardPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E61EA11A18003DB186 /* PVOnboardPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F20F55EA1EA11A18003DB186 /* PVOnboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E71EA11A18003DB186 /* PVOnboardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F20F55EB1EA11A18003DB186 /* PVOnboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F20F55E81EA11A18003DB186 /* PVOnboardView.m */; };
 /* End PBXBuildFile section */
 

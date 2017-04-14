@@ -33,5 +33,5 @@ FOUNDATION_EXPORT const unsigned char PVOnboardKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PVOnboardKit/PublicHeader.h>
 
-#import <PVOnboardKit/PVKOnboardView.h>
-#import <PVOnboardKit/PVKOnboardPage.h>
+#import <PVOnboardKit/PVOnboardView.h>
+#import <PVOnboardKit/PVOnboardPage.h>
