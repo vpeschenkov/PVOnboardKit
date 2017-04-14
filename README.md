@@ -126,7 +126,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 
 # Thanks
 
-Thank @TanguyAladenise for [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) is's awesome!
+Thank @TanguyAladenise for [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) it's awesome!
 
 # Community
 
