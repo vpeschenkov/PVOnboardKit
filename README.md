@@ -1,16 +1,16 @@
 # PVOnboardKit
 Make any app tutorial **as easy as possible**😎❕
 
-**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses **UITableView**. 
+**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1]. 
 
-Also, for more customization [PVOnboardKit](https://github.com/vpeschenkov/PVOnboardKit) uses [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) instead of [UIPageControl](https://developer.apple.com/reference/uikit/uipagecontrol).
+Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
 # Task Lists
-- [ ] Add to [CocoaPods Specs](https://github.com/CocoaPods/Specs)
+- [ ] Add to [CocoaPods Specs][5]
 - [ ] Add an example on Swift
 - [ ] Add an example on Objective-C
-- [ ] Add reuse ability to [PVOnboardPage](https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardPage.h)
-- [ ] Bring out bottom controls from [PVOnboardView](https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h)
+- [ ] Add reuse ability to [PVOnboardPage][6]
+- [ ] Bring out bottom controls from [PVOnboardView][7]
 
 # Requirements
 Xcode 8. Ready for use on iOS 8+
@@ -21,10 +21,10 @@ Adding the following to your Podfile and running pod install should do the trick
 pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 ```
 
-1. Import PVOnboardKit
-1. Create OKOnboardView and add to your view
-1. Implement PVOnboardViewDelegate and PVOnboardViewDataSource and assign to instance of OKOnboardView
-1. Call reloadData from instance of OKOnboardView
+1. Import [PVOnboardKit][2]
+1. Create [PVOnboardView][7] and add to your view
+1. Implement [PVOnboardViewDelegate][8] and [PVOnboardViewDataSource][9] and assign to instance of [PVOnboardView][7]
+1. Call reloadData from instance of [PVOnboardView][7]
 1. Enjoy😎❕
 
 ## Objective-C
@@ -126,7 +126,7 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 
 # Thanks
 
-Thank @TanguyAladenise for [TAPageControl](https://github.com/TanguyAladenise/TAPageControl) it's awesome!
+Thank @TanguyAladenise for [**TAPageControl**][3] it's awesome!
 
 # Community
 
@@ -135,3 +135,13 @@ Questions, comments, issues, and pull requests are always welcome😄❕
 # License
 
 This project is made available under the MIT license. See LICENSE for details.
+
+[1]: https://developer.apple.com/reference/uikit/uitableview
+[2]: https://github.com/vpeschenkov/PVOnboardKit
+[3]: https://github.com/TanguyAladenise/TAPageControl
+[4]: https://developer.apple.com/reference/uikit/uipagecontrol
+[5]: https://github.com/CocoaPods/Specs
+[6]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardPage.h
+[7]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h
+[8]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h
+[9]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h
