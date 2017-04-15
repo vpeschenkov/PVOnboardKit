@@ -8,7 +8,7 @@ Make an app tutorial **as easy as possible**😎❕
 Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
 # Task Lists
-- [ ] Add to [CocoaPods Specs][5]
+- [x] Add to [CocoaPods Specs][5]
 - [ ] Add an example on Swift
 - [x] Add an example on Objective-C
 - [ ] Add reuse ability to [PVOnboardPage][6]
