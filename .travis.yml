@@ -2,10 +2,7 @@ osx_image: xcode8
 language: objective-c
 
 script: 
-    - cd Examples/PVOnboardKitExample
-    - pod install
-    - xcodebuild -workspace PVOnboardKitExample.xcworkspace -scheme PVOnboardKitExample -destination platform='iOS Simulator',OS='10.0',name='iPhone 6s' build test
-    - cd ../../
-    - cd Examples/PVOnboardKitSwiftExample
-    - pod install
-    - xcodebuild -workspace PVOnboardKitSwiftExample.xcworkspace -scheme PVOnboardKitSwiftExample -destination platform='iOS Simulator',OS='10.0',name='iPhone 6s' build test
+    - pod --project-directory=Examples/PVOnboardKitExample/ install
+    - xctool -project Examples/PVOnboardKitExample/PVOnboardKitExample.xcworkspace -sdk iphonesimulator -scheme PVOnboardKitExample build
+    - pod --project-directory=Examples/PVOnboardKitSwiftExample/ install
+    - xctool -project Examples/PVOnboardKitSwiftExample/PVOnboardKitSwiftExample.xcworkspace -sdk iphonesimulator -scheme PVOnboardKitExample build
