@@ -1,10 +1,14 @@
-osx_image: xcode8.2
+osx_image: xcode8
 language: objective-c
 
 before_script:
     - cd Examples/PVOnboardKitExample
     - pod install
 
-xcode_workspace: PVOnboardKitExample.xcworkspace
-xcode_scheme: PVOnboardKitExample
-script: set -o pipefail
+xcode_workspace: 
+    - PVOnboardKitExample.xcworkspace
+    - PVOnboardKitSwiftExample.xcworkspace
+
+xcode_scheme: 
+    - PVOnboardKitExample
+    - PVOnboardKitSwiftExample.xcworkspace

@@ -12,7 +12,7 @@ Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] i
 
 # Task Lists
 - [x] Add to [CocoaPods Specs][5]
-- [ ] Add an example on Swift
+- [x] Add an example on Swift
 - [x] Add an example on Objective-C
 - [ ] Add reuse ability to [PVOnboardPage][6]
 - [ ] Bring out bottom controls from [PVOnboardView][7]
