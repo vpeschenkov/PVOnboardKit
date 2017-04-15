@@ -4,8 +4,8 @@ language: objective-c
 script: 
     - cd Examples/PVOnboardKitExample
     - pod install
-    - xctool -workspace PVOnboardKitExample.xcworkspace -scheme PVOnboardKitExample build test
+    - xctool -workspace PVOnboardKitExample/PVOnboardKitExample.xcworkspace -scheme PVOnboardKitExample build test
     - cd ../../
     - cd Examples/PVOnboardKitSwiftExample
     - pod install
-    - xctool -workspace PVOnboardKitSwiftExample.xcworkspace -scheme PVOnboardKitSwiftExample build test
+    - xctool -workspace PVOnboardKitSwiftExample/PVOnboardKitSwiftExample.xcworkspace -scheme PVOnboardKitSwiftExample build test
