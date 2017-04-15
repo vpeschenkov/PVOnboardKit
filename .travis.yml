@@ -5,8 +5,7 @@ before_script:
     - cd Examples/PVOnboardKitExample
     - pod install
     
-xcode_workspace: PVOnboardKitExample.xcworkspace
-xcode_scheme: PVOnboardKitExample
+script: xctool -workspace PVOnboardKitExample.xcworkspace -scheme PVOnboardKitExample build test
 
 after_script:
     - cd ../../
@@ -15,5 +14,4 @@ before_script:
     - cd Examples/PVOnboardKitSwiftExample
     - pod install
 
-xcode_workspace: PVOnboardKitSwiftExample.xcworkspace
-xcode_scheme: PVOnboardKitSwiftExample
+script: xctool -workspace PVOnboardKitSwiftExample.xcworkspace -scheme PVOnboardKitSwiftExample build test
