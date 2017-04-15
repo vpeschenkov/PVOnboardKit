@@ -4,7 +4,7 @@
 
 ![Demo!](http://i.imgur.com/zASOJgr.gif)
 
-Make an app tutorial **as easy as possible**😎❕
+Make an app tutorial **as easy as possible**!
 
 **PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1]. 
 
