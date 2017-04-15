@@ -1,4 +1,7 @@
 # PVOnboardKit
+
+![][10] ![][11] ![][12]
+
 ![Demo!](http://i.imgur.com/zASOJgr.gif)
 
 Make an app tutorial **as easy as possible**😎❕
@@ -20,7 +23,7 @@ Xcode 8. Ready for use on iOS 8+
 # Install
 Adding the following to your Podfile and running pod install should do the trick:
 ```
-pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
+pod 'PVOnboardKit'
 ```
 
 1. Import [PVOnboardKit][2]
@@ -147,3 +150,6 @@ This project is made available under the MIT license. See LICENSE for details.
 [7]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L44
 [8]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L125
 [9]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L150
+[10]: https://travis-ci.org/vpeschenkov/PVOnboardKit.svg?branch=master
+[11]: https://cocoapod-badges.herokuapp.com/v/PVOnboardKit/badge.png
+[12]: https://cocoapod-badges.herokuapp.com/p/PVOnboardKit/badge.png
