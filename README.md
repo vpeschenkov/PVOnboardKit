@@ -8,7 +8,7 @@ Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] i
 # Task Lists
 - [ ] Add to [CocoaPods Specs][5]
 - [ ] Add an example on Swift
-- [ ] Add an example on Objective-C
+- [x] Add an example on Objective-C
 - [ ] Add reuse ability to [PVOnboardPage][6]
 - [ ] Bring out bottom controls from [PVOnboardView][7]
 
@@ -30,97 +30,97 @@ pod 'PVOnboardKit', :git=>'https://github.com/vpeschenkov/PVOnboardKit'
 ## Objective-C
 
 ### Delegate
-```obj-c
+```
 @optional
 /**
- *  Called when a user did touch on the left action button.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
- */
+*  Called when a user did touch on the left action button.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a page.
+*/
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
 ```
 
-```obj-c
+```
 @optional
 /**
- *  Called when a user did touch on the right action button.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
- */
+*  Called when a user did touch on the right action button.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a page.
+*/
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 ```
 
 ### DataSource
-```obj-c
+```
 @required
 /**
- *  Requests a number of pages in a current onboard.
- *
- *  @param onboardView The onboard view.
- *  @return The number of pages.
- */
+*  Requests a number of pages in a current onboard.
+*
+*  @param onboardView The onboard view.
+*  @return The number of pages.
+*/
 - (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView;
 ```
 
-```obj-c
+```
 @required
 /**
- *  Requests a page view for the page at index.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a requested page.
- *  @return The view that conforms to PVOnboardPage protocol.
- */
+*  Requests a page view for the page at index.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a requested page.
+*  @return The view that conforms to PVOnboardPage protocol.
+*/
 - (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index;
 ```
 
-```obj-c
+```
 @optional
 /**
- *  Requests a visible state for the right action button for page at index.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a requested page.
- *  @return Return YES if a action button should be visible or NO if shouldn't.
- */
+*  Requests a visible state for the right action button for page at index.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a requested page.
+*  @return Return YES if a action button should be visible or NO if shouldn't.
+*/
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideRightActionButtonForPageAtIndex:(NSInteger)index;
 ```
 
-```obj-c
+```
 @optional
 /**
- *  Requests a title for the right action button for page at index.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a requested page.
- *  @return Return the string that should use as a title.
- */
+*  Requests a title for the right action button for page at index.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a requested page.
+*  @return Return the string that should use as a title.
+*/
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForRightActionButtonAtIndex:(NSInteger)index;
 ```
 
-```obj-c
+```
 @optional
 /**
- *  Requests a visible state for the left action button for page at index.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a requested page.
- *  @return Return YES if a action button should be visible or NO if shouldn't.
- */
+*  Requests a visible state for the left action button for page at index.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a requested page.
+*  @return Return YES if a action button should be visible or NO if shouldn't.
+*/
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideLeftActionButtonForPageAtIndex:(NSInteger)index;
 ```
 
-```obj-c
+```
 @optional
 /**
- *  Requests a title for the left action button for page at index.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a requested page.
- *  @return Return the string that should use as a title.
- */
+*  Requests a title for the left action button for page at index.
+*
+*  @param onboardView The onboard view.
+*  @param index The index of a requested page.
+*  @return Return the string that should use as a title.
+*/
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
 ```
 
@@ -142,6 +142,6 @@ This project is made available under the MIT license. See LICENSE for details.
 [4]: https://developer.apple.com/reference/uikit/uipagecontrol
 [5]: https://github.com/CocoaPods/Specs
 [6]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardPage.h
-[7]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L44
-[8]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L125
-[9]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L150
+[7]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h
+[8]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h
+[9]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h

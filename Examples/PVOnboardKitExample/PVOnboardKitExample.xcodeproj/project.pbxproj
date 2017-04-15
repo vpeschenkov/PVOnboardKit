@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98C79792DFAACE3CA2BA0D1B /* Pods_PVOnboardKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47E1E72EE8657C639B4AF96 /* Pods_PVOnboardKitExample.framework */; };
+		F21240A61EA1E23600307531 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240A51EA1E23600307531 /* main.m */; };
+		F21240B11EA1E23700307531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21240B01EA1E23700307531 /* Assets.xcassets */; };
+		F21240BF1EA1E46B00307531 /* PVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240BD1EA1E46B00307531 /* PVAppDelegate.m */; };
+		F21240C11EA1E4A900307531 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21240C01EA1E4A900307531 /* Launch Screen.storyboard */; };
+		F21240C71EA1E67E00307531 /* PVIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240C61EA1E67E00307531 /* PVIntroViewController.m */; };
+		F21240CA1EA1E6C100307531 /* PVIntroModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240C91EA1E6C100307531 /* PVIntroModel.m */; };
+		F21240CD1EA1E6F400307531 /* PVIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240CC1EA1E6F400307531 /* PVIntroView.m */; };
+		F21240D11EA1E8A600307531 /* PVIntroOnboardPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240D01EA1E8A600307531 /* PVIntroOnboardPage.m */; };
+		F21240D51EA1E9C400307531 /* PVIntroOnboardPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240D41EA1E9C400307531 /* PVIntroOnboardPageModel.m */; };
+		F21240DF1EA1F42700307531 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F21240DA1EA1F42700307531 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		341C5305AEA1391BF091626F /* Pods-PVOnboardKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVOnboardKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PVOnboardKitExample/Pods-PVOnboardKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A63F5942A3E2A313B475BB /* Pods-PVOnboardKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVOnboardKitExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PVOnboardKitExample/Pods-PVOnboardKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		A47E1E72EE8657C639B4AF96 /* Pods_PVOnboardKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PVOnboardKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21240A11EA1E23600307531 /* PVOnboardKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PVOnboardKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21240A51EA1E23600307531 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F21240B01EA1E23700307531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		F21240B51EA1E23700307531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21240BC1EA1E46B00307531 /* PVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVAppDelegate.h; sourceTree = "<group>"; };
+		F21240BD1EA1E46B00307531 /* PVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVAppDelegate.m; sourceTree = "<group>"; };
+		F21240C01EA1E4A900307531 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F21240C51EA1E67E00307531 /* PVIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroViewController.h; sourceTree = "<group>"; };
+		F21240C61EA1E67E00307531 /* PVIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroViewController.m; sourceTree = "<group>"; };
+		F21240C81EA1E6C100307531 /* PVIntroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroModel.h; sourceTree = "<group>"; };
+		F21240C91EA1E6C100307531 /* PVIntroModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroModel.m; sourceTree = "<group>"; };
+		F21240CB1EA1E6F400307531 /* PVIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroView.h; sourceTree = "<group>"; };
+		F21240CC1EA1E6F400307531 /* PVIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroView.m; sourceTree = "<group>"; };
+		F21240CF1EA1E8A600307531 /* PVIntroOnboardPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroOnboardPage.h; sourceTree = "<group>"; };
+		F21240D01EA1E8A600307531 /* PVIntroOnboardPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroOnboardPage.m; sourceTree = "<group>"; };
+		F21240D21EA1E91700307531 /* PVIntroOnboardPage_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroOnboardPage_Private.h; sourceTree = "<group>"; };
+		F21240D31EA1E9C400307531 /* PVIntroOnboardPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroOnboardPageModel.h; sourceTree = "<group>"; };
+		F21240D41EA1E9C400307531 /* PVIntroOnboardPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroOnboardPageModel.m; sourceTree = "<group>"; };
+		F21240DB1EA1F42700307531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F212409E1EA1E23600307531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C79792DFAACE3CA2BA0D1B /* Pods_PVOnboardKitExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D9C86419D50BBE56CB06A98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A47E1E72EE8657C639B4AF96 /* Pods_PVOnboardKitExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7549B0E48FB8E5A77F1B2C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				341C5305AEA1391BF091626F /* Pods-PVOnboardKitExample.debug.xcconfig */,
+				A2A63F5942A3E2A313B475BB /* Pods-PVOnboardKitExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F21240981EA1E23600307531 = {
+			isa = PBXGroup;
+			children = (
+				F21240A31EA1E23600307531 /* PVOnboardKitExample */,
+				F21240A21EA1E23600307531 /* Products */,
+				B7549B0E48FB8E5A77F1B2C4 /* Pods */,
+				8D9C86419D50BBE56CB06A98 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F21240A21EA1E23600307531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F21240A11EA1E23600307531 /* PVOnboardKitExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F21240A31EA1E23600307531 /* PVOnboardKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				F21240BB1EA1E46B00307531 /* Source */,
+				F21240D61EA1F2C500307531 /* Resources */,
+				F21240A41EA1E23600307531 /* Supporting Files */,
+			);
+			path = PVOnboardKitExample;
+			sourceTree = "<group>";
+		};
+		F21240A41EA1E23600307531 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F21240B51EA1E23700307531 /* Info.plist */,
+				F21240A51EA1E23600307531 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F21240BB1EA1E46B00307531 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F21240BE1EA1E46B00307531 /* Inro */,
+				F21240BC1EA1E46B00307531 /* PVAppDelegate.h */,
+				F21240BD1EA1E46B00307531 /* PVAppDelegate.m */,
+				F21240C01EA1E4A900307531 /* Launch Screen.storyboard */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F21240BE1EA1E46B00307531 /* Inro */ = {
+			isa = PBXGroup;
+			children = (
+				F21240C21EA1E50E00307531 /* Controller */,
+				F21240C31EA1E50E00307531 /* Model */,
+				F21240C41EA1E50E00307531 /* View */,
+			);
+			path = Inro;
+			sourceTree = "<group>";
+		};
+		F21240C21EA1E50E00307531 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F21240C51EA1E67E00307531 /* PVIntroViewController.h */,
+				F21240C61EA1E67E00307531 /* PVIntroViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F21240C31EA1E50E00307531 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F21240C81EA1E6C100307531 /* PVIntroModel.h */,
+				F21240C91EA1E6C100307531 /* PVIntroModel.m */,
+				F21240D31EA1E9C400307531 /* PVIntroOnboardPageModel.h */,
+				F21240D41EA1E9C400307531 /* PVIntroOnboardPageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F21240C41EA1E50E00307531 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F21240CE1EA1E82E00307531 /* OnboardPage */,
+				F21240CB1EA1E6F400307531 /* PVIntroView.h */,
+				F21240CC1EA1E6F400307531 /* PVIntroView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F21240CE1EA1E82E00307531 /* OnboardPage */ = {
+			isa = PBXGroup;
+			children = (
+				F21240CF1EA1E8A600307531 /* PVIntroOnboardPage.h */,
+				F21240D01EA1E8A600307531 /* PVIntroOnboardPage.m */,
+				F21240D21EA1E91700307531 /* PVIntroOnboardPage_Private.h */,
+			);
+			path = OnboardPage;
+			sourceTree = "<group>";
+		};
+		F21240D61EA1F2C500307531 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F21240D71EA1F42700307531 /* Localizable */,
+				F21240B01EA1E23700307531 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F21240D71EA1F42700307531 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				F21240DA1EA1F42700307531 /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F21240A01EA1E23600307531 /* PVOnboardKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F21240B81EA1E23700307531 /* Build configuration list for PBXNativeTarget "PVOnboardKitExample" */;
+			buildPhases = (
+				FFC3CCC30CD7848EC7E32798 /* [CP] Check Pods Manifest.lock */,
+				F212409D1EA1E23600307531 /* Sources */,
+				F212409E1EA1E23600307531 /* Frameworks */,
+				F212409F1EA1E23600307531 /* Resources */,
+				0C5747627850F135C6804E3A /* [CP] Embed Pods Frameworks */,
+				4F94048C1C0289CC92DD435A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PVOnboardKitExample;
+			productName = PVOnboardKitExample;
+			productReference = F21240A11EA1E23600307531 /* PVOnboardKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F21240991EA1E23600307531 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PV;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Victor Peschenkov";
+				TargetAttributes = {
+					F21240A01EA1E23600307531 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = F212409C1EA1E23600307531 /* Build configuration list for PBXProject "PVOnboardKitExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F21240981EA1E23600307531;
+			productRefGroup = F21240A21EA1E23600307531 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F21240A01EA1E23600307531 /* PVOnboardKitExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F212409F1EA1E23600307531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21240C11EA1E4A900307531 /* Launch Screen.storyboard in Resources */,
+				F21240DF1EA1F42700307531 /* Localizable.strings in Resources */,
+				F21240B11EA1E23700307531 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C5747627850F135C6804E3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PVOnboardKitExample/Pods-PVOnboardKitExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F94048C1C0289CC92DD435A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PVOnboardKitExample/Pods-PVOnboardKitExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC3CCC30CD7848EC7E32798 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F212409D1EA1E23600307531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F21240D51EA1E9C400307531 /* PVIntroOnboardPageModel.m in Sources */,
+				F21240C71EA1E67E00307531 /* PVIntroViewController.m in Sources */,
+				F21240BF1EA1E46B00307531 /* PVAppDelegate.m in Sources */,
+				F21240A61EA1E23600307531 /* main.m in Sources */,
+				F21240CD1EA1E6F400307531 /* PVIntroView.m in Sources */,
+				F21240CA1EA1E6C100307531 /* PVIntroModel.m in Sources */,
+				F21240D11EA1E8A600307531 /* PVIntroOnboardPage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F21240DA1EA1F42700307531 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F21240DB1EA1F42700307531 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F21240B61EA1E23700307531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F21240B71EA1E23700307531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F21240B91EA1E23700307531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 341C5305AEA1391BF091626F /* Pods-PVOnboardKitExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PVOnboardKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F21240BA1EA1E23700307531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A63F5942A3E2A313B475BB /* Pods-PVOnboardKitExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = PVOnboardKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F212409C1EA1E23600307531 /* Build configuration list for PBXProject "PVOnboardKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21240B61EA1E23700307531 /* Debug */,
+				F21240B71EA1E23700307531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F21240B81EA1E23700307531 /* Build configuration list for PBXNativeTarget "PVOnboardKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F21240B91EA1E23700307531 /* Debug */,
+				F21240BA1EA1E23700307531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F21240991EA1E23600307531 /* Project object */;
+}

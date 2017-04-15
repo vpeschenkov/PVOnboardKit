@@ -1,0 +1,24 @@
+PODS:
+  - PVOnboardKit (0.1.0):
+    - TAPageControl
+  - TAPageControl (0.2.0)
+
+DEPENDENCIES:
+  - PVOnboardKit (from `https://github.com/vpeschenkov/PVOnboardKit`)
+
+EXTERNAL SOURCES:
+  PVOnboardKit:
+    :git: https://github.com/vpeschenkov/PVOnboardKit
+
+CHECKOUT OPTIONS:
+  PVOnboardKit:
+    :commit: dfb9e6e0cebd7aa5b5bab9ed3a508b534f54ac61
+    :git: https://github.com/vpeschenkov/PVOnboardKit
+
+SPEC CHECKSUMS:
+  PVOnboardKit: 2ff2cd9455884fb048d81161326b7dafa6fdbf86
+  TAPageControl: fd11d779bbb5c2464ca2f55dde9e288213ea8a9b
+
+PODFILE CHECKSUM: 45e0befa493e75fd4b829e5b926d2e6d9ffdefbe
+
+COCOAPODS: 1.1.1
