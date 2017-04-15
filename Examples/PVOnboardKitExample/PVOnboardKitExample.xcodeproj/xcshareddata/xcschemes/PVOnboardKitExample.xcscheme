@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F29319191EA2B42600F4EB57"
+               BuildableName = "PVOnboardKitExampleTests.xctest"
+               BlueprintName = "PVOnboardKitExampleTests"
+               ReferencedContainer = "container:PVOnboardKitExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

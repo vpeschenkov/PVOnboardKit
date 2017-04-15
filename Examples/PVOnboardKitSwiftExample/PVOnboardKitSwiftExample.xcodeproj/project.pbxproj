@@ -17,7 +17,18 @@
 		F29319011EA290D700F4EB57 /* IntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29319001EA290D700F4EB57 /* IntroPage.swift */; };
 		F29319051EA2A2D600F4EB57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F29319031EA2A2D600F4EB57 /* Localizable.strings */; };
 		F29319071EA2A3A900F4EB57 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F29319061EA2A3A900F4EB57 /* Launch Screen.storyboard */; };
+		F293190F1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F293190E1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F29319111EA2B40300F4EB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F29318D51EA2849D00F4EB57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F29318DC1EA2849D00F4EB57;
+			remoteInfo = PVOnboardKitSwiftExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0AF620F625E822B5A8460871 /* Pods_PVOnboardKitSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PVOnboardKitSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +45,9 @@
 		F29319001EA290D700F4EB57 /* IntroPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPage.swift; sourceTree = "<group>"; };
 		F29319041EA2A2D600F4EB57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F29319061EA2A3A900F4EB57 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Source/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F293190C1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PVOnboardKitSwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F293190E1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVOnboardKitSwiftExampleTests.swift; sourceTree = "<group>"; };
+		F29319101EA2B40300F4EB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D46B2D653830F3DADC91620A /* Pods_PVOnboardKitSwiftExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F29319091EA2B40300F4EB57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F29318DF1EA2849D00F4EB57 /* PVOnboardKitSwiftExample */,
+				F293190D1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests */,
 				F29318DE1EA2849D00F4EB57 /* Products */,
 				1FEBE329CF47EA6F5C28D0F8 /* Pods */,
 				1EA7B355A6FCAFC1434A3FE7 /* Frameworks */,
@@ -79,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F29318DD1EA2849D00F4EB57 /* PVOnboardKitSwiftExample.app */,
+				F293190C1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +163,15 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		F293190D1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F293190E1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.swift */,
+				F29319101EA2B40300F4EB57 /* Info.plist */,
+			);
+			path = PVOnboardKitSwiftExampleTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +195,24 @@
 			productReference = F29318DD1EA2849D00F4EB57 /* PVOnboardKitSwiftExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F293190B1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F29319151EA2B40300F4EB57 /* Build configuration list for PBXNativeTarget "PVOnboardKitSwiftExampleTests" */;
+			buildPhases = (
+				F29319081EA2B40300F4EB57 /* Sources */,
+				F29319091EA2B40300F4EB57 /* Frameworks */,
+				F293190A1EA2B40300F4EB57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F29319121EA2B40300F4EB57 /* PBXTargetDependency */,
+			);
+			name = PVOnboardKitSwiftExampleTests;
+			productName = PVOnboardKitSwiftExampleTests;
+			productReference = F293190C1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,6 +226,11 @@
 					F29318DC1EA2849D00F4EB57 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Manual;
+					};
+					F293190B1EA2B40300F4EB57 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F29318DC1EA2849D00F4EB57;
 					};
 				};
 			};
@@ -193,6 +248,7 @@
 			projectRoot = "";
 			targets = (
 				F29318DC1EA2849D00F4EB57 /* PVOnboardKitSwiftExample */,
+				F293190B1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +261,13 @@
 				F29319071EA2A3A900F4EB57 /* Launch Screen.storyboard in Resources */,
 				F29319051EA2A2D600F4EB57 /* Localizable.strings in Resources */,
 				F29318E81EA2849D00F4EB57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F293190A1EA2B40300F4EB57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +335,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F29319081EA2B40300F4EB57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F293190F1EA2B40300F4EB57 /* PVOnboardKitSwiftExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F29319121EA2B40300F4EB57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F29318DC1EA2849D00F4EB57 /* PVOnboardKitSwiftExample */;
+			targetProxy = F29319111EA2B40300F4EB57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F29319031EA2A2D600F4EB57 /* Localizable.strings */ = {
@@ -405,6 +484,34 @@
 			};
 			name = Release;
 		};
+		F29319131EA2B40300F4EB57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PVOnboardKitSwiftExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PVOnboardKitSwiftExample.app/PVOnboardKitSwiftExample";
+			};
+			name = Debug;
+		};
+		F29319141EA2B40300F4EB57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PVOnboardKitSwiftExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PVOnboardKitSwiftExample.app/PVOnboardKitSwiftExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,6 +532,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F29319151EA2B40300F4EB57 /* Build configuration list for PBXNativeTarget "PVOnboardKitSwiftExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F29319131EA2B40300F4EB57 /* Debug */,
+				F29319141EA2B40300F4EB57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
