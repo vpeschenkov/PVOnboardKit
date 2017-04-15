@@ -41,7 +41,7 @@
 		F21240B51EA1E23700307531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F21240BC1EA1E46B00307531 /* PVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVAppDelegate.h; sourceTree = "<group>"; };
 		F21240BD1EA1E46B00307531 /* PVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVAppDelegate.m; sourceTree = "<group>"; };
-		F21240C01EA1E4A900307531 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F21240C01EA1E4A900307531 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Source/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F21240C51EA1E67E00307531 /* PVIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroViewController.h; sourceTree = "<group>"; };
 		F21240C61EA1E67E00307531 /* PVIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroViewController.m; sourceTree = "<group>"; };
 		F21240C81EA1E6C100307531 /* PVIntroModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroModel.h; sourceTree = "<group>"; };
@@ -128,6 +128,7 @@
 		F21240A41EA1E23600307531 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F21240C01EA1E4A900307531 /* Launch Screen.storyboard */,
 				F21240B51EA1E23700307531 /* Info.plist */,
 				F21240A51EA1E23600307531 /* main.m */,
 			);
@@ -140,7 +141,6 @@
 				F21240BE1EA1E46B00307531 /* Inro */,
 				F21240BC1EA1E46B00307531 /* PVAppDelegate.h */,
 				F21240BD1EA1E46B00307531 /* PVAppDelegate.m */,
-				F21240C01EA1E4A900307531 /* Launch Screen.storyboard */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -583,6 +583,7 @@
 				F29319221EA2B42600F4EB57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

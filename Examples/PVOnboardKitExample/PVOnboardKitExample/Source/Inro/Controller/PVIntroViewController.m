@@ -43,7 +43,7 @@
 @dynamic view;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nil bundle:nil];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.model = [[PVIntroModel alloc] init];
     }
@@ -133,8 +133,8 @@
     self.view.onboardView.delegate = self;
     self.view.onboardView.dataSource = self;
     
-    self.view.onboardView.dotImage = [UIImage imageNamed:@"IntoDotImage"];
-    self.view.onboardView.currentDotImage = [UIImage imageNamed:@"IntoCurrentDotImage"];
+    self.view.onboardView.dotImage = [UIImage imageNamed:@"IntroDotImage"];
+    self.view.onboardView.currentDotImage = [UIImage imageNamed:@"IntroCurrentDotImage"];
     
     [self.view.onboardView setUpLeftActionButtonWithBlock:setUpActionButtonBlock];
     [self.view.onboardView setUpRightActionButtonWithBlock:setUpActionButtonBlock];
