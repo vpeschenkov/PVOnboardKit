@@ -139,7 +139,7 @@ Questions, comments, issues, and pull requests are always welcome😄❕
 
 # License
 
-This project is made available under the MIT license. See LICENSE for details.
+Distributed under the MIT license. See LICENSE for more information.
 
 [1]: https://developer.apple.com/reference/uikit/uitableview
 [2]: https://github.com/vpeschenkov/PVOnboardKit
