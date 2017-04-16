@@ -2,7 +2,7 @@
 
 ![][10] ![][11] ![][12]
 
-![Demo!](http://i.imgur.com/zASOJgr.gif)
+![Demo!](http://i.imgur.com/yvcI91a.gif)
 
 Make an app tutorial **as easy as possible**!
 
