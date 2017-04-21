@@ -19,3 +19,8 @@
 
 ### Improvements
 - Extracted bottom control panel into ```PVOnboardFooterView``` class.
+
+## 0.1.0
+
+### Added
+- Added a project to GitHub.
