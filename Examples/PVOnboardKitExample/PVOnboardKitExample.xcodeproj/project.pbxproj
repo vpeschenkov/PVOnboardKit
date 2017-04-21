@@ -18,18 +18,7 @@
 		F21240D11EA1E8A600307531 /* PVIntroOnboardPage.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240D01EA1E8A600307531 /* PVIntroOnboardPage.m */; };
 		F21240D51EA1E9C400307531 /* PVIntroOnboardPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F21240D41EA1E9C400307531 /* PVIntroOnboardPageModel.m */; };
 		F21240DF1EA1F42700307531 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F21240DA1EA1F42700307531 /* Localizable.strings */; };
-		F293191D1EA2B42600F4EB57 /* PVOnboardKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F293191C1EA2B42600F4EB57 /* PVOnboardKitExampleTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F293191F1EA2B42600F4EB57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F21240991EA1E23600307531 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F21240A01EA1E23600307531;
-			remoteInfo = PVOnboardKitExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		341C5305AEA1391BF091626F /* Pods-PVOnboardKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PVOnboardKitExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PVOnboardKitExample/Pods-PVOnboardKitExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,9 +43,6 @@
 		F21240D31EA1E9C400307531 /* PVIntroOnboardPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVIntroOnboardPageModel.h; sourceTree = "<group>"; };
 		F21240D41EA1E9C400307531 /* PVIntroOnboardPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVIntroOnboardPageModel.m; sourceTree = "<group>"; };
 		F21240DB1EA1F42700307531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F293191A1EA2B42600F4EB57 /* PVOnboardKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PVOnboardKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F293191C1EA2B42600F4EB57 /* PVOnboardKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PVOnboardKitExampleTests.m; sourceTree = "<group>"; };
-		F293191E1EA2B42600F4EB57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +51,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98C79792DFAACE3CA2BA0D1B /* Pods_PVOnboardKitExample.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29319171EA2B42600F4EB57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				F21240A31EA1E23600307531 /* PVOnboardKitExample */,
-				F293191B1EA2B42600F4EB57 /* PVOnboardKitExampleTests */,
 				F21240A21EA1E23600307531 /* Products */,
 				B7549B0E48FB8E5A77F1B2C4 /* Pods */,
 				8D9C86419D50BBE56CB06A98 /* Frameworks */,
@@ -110,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				F21240A11EA1E23600307531 /* PVOnboardKitExample.app */,
-				F293191A1EA2B42600F4EB57 /* PVOnboardKitExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,15 +189,6 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
-		F293191B1EA2B42600F4EB57 /* PVOnboardKitExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				F293191C1EA2B42600F4EB57 /* PVOnboardKitExampleTests.m */,
-				F293191E1EA2B42600F4EB57 /* Info.plist */,
-			);
-			path = PVOnboardKitExampleTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,24 +212,6 @@
 			productReference = F21240A11EA1E23600307531 /* PVOnboardKitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F29319191EA2B42600F4EB57 /* PVOnboardKitExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F29319231EA2B42600F4EB57 /* Build configuration list for PBXNativeTarget "PVOnboardKitExampleTests" */;
-			buildPhases = (
-				F29319161EA2B42600F4EB57 /* Sources */,
-				F29319171EA2B42600F4EB57 /* Frameworks */,
-				F29319181EA2B42600F4EB57 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F29319201EA2B42600F4EB57 /* PBXTargetDependency */,
-			);
-			name = PVOnboardKitExampleTests;
-			productName = PVOnboardKitExampleTests;
-			productReference = F293191A1EA2B42600F4EB57 /* PVOnboardKitExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -275,11 +225,6 @@
 					F21240A01EA1E23600307531 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Manual;
-					};
-					F29319191EA2B42600F4EB57 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = F21240A01EA1E23600307531;
 					};
 				};
 			};
@@ -297,7 +242,6 @@
 			projectRoot = "";
 			targets = (
 				F21240A01EA1E23600307531 /* PVOnboardKitExample */,
-				F29319191EA2B42600F4EB57 /* PVOnboardKitExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,13 +254,6 @@
 				F21240C11EA1E4A900307531 /* Launch Screen.storyboard in Resources */,
 				F21240DF1EA1F42700307531 /* Localizable.strings in Resources */,
 				F21240B11EA1E23700307531 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F29319181EA2B42600F4EB57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,23 +322,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F29319161EA2B42600F4EB57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F293191D1EA2B42600F4EB57 /* PVOnboardKitExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F29319201EA2B42600F4EB57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F21240A01EA1E23600307531 /* PVOnboardKitExample */;
-			targetProxy = F293191F1EA2B42600F4EB57 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F21240DA1EA1F42700307531 /* Localizable.strings */ = {
@@ -531,30 +452,6 @@
 			};
 			name = Release;
 		};
-		F29319211EA2B42600F4EB57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PVOnboardKitExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PVOnboardKitExample.app/PVOnboardKitExample";
-			};
-			name = Debug;
-		};
-		F29319221EA2B42600F4EB57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PVOnboardKitExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitExampleTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PVOnboardKitExample.app/PVOnboardKitExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,15 +469,6 @@
 			buildConfigurations = (
 				F21240B91EA1E23700307531 /* Debug */,
 				F21240BA1EA1E23700307531 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F29319231EA2B42600F4EB57 /* Build configuration list for PBXNativeTarget "PVOnboardKitExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F29319211EA2B42600F4EB57 /* Debug */,
-				F29319221EA2B42600F4EB57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
