@@ -25,6 +25,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * The PVOnboardPage protocol
  */
@@ -55,3 +57,5 @@
 - (void)didContentHide;
 
 @end
+
+NS_ASSUME_NONNULL_END

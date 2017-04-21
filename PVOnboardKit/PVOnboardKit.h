@@ -23,7 +23,7 @@
  THE SOFTWARE.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 //! Project version number for PVOnboardKit.
 FOUNDATION_EXPORT double PVOnboardKitVersionNumber;

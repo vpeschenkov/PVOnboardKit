@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		ADD1B40EE6DDE72302240190 /* Pods_PVOnboardKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA36414062E410A21ECBA8A4 /* Pods_PVOnboardKit.framework */; };
 		F20F55DA1EA118BB003DB186 /* PVOnboardKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55D81EA118BB003DB186 /* PVOnboardKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F20F55E91EA11A18003DB186 /* PVOnboardPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E61EA11A18003DB186 /* PVOnboardPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F20F55EA1EA11A18003DB186 /* PVOnboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = F20F55E71EA11A18003DB186 /* PVOnboardView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F20F55EB1EA11A18003DB186 /* PVOnboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F20F55E81EA11A18003DB186 /* PVOnboardView.m */; };
+		F2D0819F1EAA62F3001B8292 /* PVOnboardFooterView.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D081981EAA62F3001B8292 /* PVOnboardFooterView.h */; };
+		F2D081A01EAA62F3001B8292 /* PVOnboardFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D081991EAA62F3001B8292 /* PVOnboardFooterView.m */; };
+		F2D081A11EAA62F3001B8292 /* PVOnboardPage.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D0819A1EAA62F3001B8292 /* PVOnboardPage.h */; };
+		F2D081A21EAA62F3001B8292 /* PVOnboardView.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D0819B1EAA62F3001B8292 /* PVOnboardView.h */; };
+		F2D081A31EAA62F3001B8292 /* PVOnboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D0819C1EAA62F3001B8292 /* PVOnboardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +23,11 @@
 		F20F55D51EA118BB003DB186 /* PVOnboardKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PVOnboardKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20F55D81EA118BB003DB186 /* PVOnboardKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVOnboardKit.h; sourceTree = "<group>"; };
 		F20F55D91EA118BB003DB186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F20F55E61EA11A18003DB186 /* PVOnboardPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVOnboardPage.h; sourceTree = "<group>"; };
-		F20F55E71EA11A18003DB186 /* PVOnboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVOnboardView.h; sourceTree = "<group>"; };
-		F20F55E81EA11A18003DB186 /* PVOnboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVOnboardView.m; sourceTree = "<group>"; };
+		F2D081981EAA62F3001B8292 /* PVOnboardFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVOnboardFooterView.h; sourceTree = "<group>"; };
+		F2D081991EAA62F3001B8292 /* PVOnboardFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVOnboardFooterView.m; sourceTree = "<group>"; };
+		F2D0819A1EAA62F3001B8292 /* PVOnboardPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVOnboardPage.h; sourceTree = "<group>"; };
+		F2D0819B1EAA62F3001B8292 /* PVOnboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVOnboardView.h; sourceTree = "<group>"; };
+		F2D0819C1EAA62F3001B8292 /* PVOnboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVOnboardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 			isa = PBXGroup;
 			children = (
 				F20F55D81EA118BB003DB186 /* PVOnboardKit.h */,
-				F20F55E61EA11A18003DB186 /* PVOnboardPage.h */,
-				F20F55E71EA11A18003DB186 /* PVOnboardView.h */,
-				F20F55E81EA11A18003DB186 /* PVOnboardView.m */,
+				F2D0819A1EAA62F3001B8292 /* PVOnboardPage.h */,
+				F2D0819B1EAA62F3001B8292 /* PVOnboardView.h */,
+				F2D0819C1EAA62F3001B8292 /* PVOnboardView.m */,
+				F2D081981EAA62F3001B8292 /* PVOnboardFooterView.h */,
+				F2D081991EAA62F3001B8292 /* PVOnboardFooterView.m */,
 				F20F55D91EA118BB003DB186 /* Info.plist */,
 			);
 			path = PVOnboardKit;
@@ -92,9 +98,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D0819F1EAA62F3001B8292 /* PVOnboardFooterView.h in Headers */,
 				F20F55DA1EA118BB003DB186 /* PVOnboardKit.h in Headers */,
-				F20F55E91EA11A18003DB186 /* PVOnboardPage.h in Headers */,
-				F20F55EA1EA11A18003DB186 /* PVOnboardView.h in Headers */,
+				F2D081A11EAA62F3001B8292 /* PVOnboardPage.h in Headers */,
+				F2D081A21EAA62F3001B8292 /* PVOnboardView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +134,7 @@
 		F20F55CC1EA118BB003DB186 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PVK;
+				CLASSPREFIX = PV;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Victor Peschenkov";
 				TargetAttributes = {
@@ -202,7 +209,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20F55EB1EA11A18003DB186 /* PVOnboardView.m in Sources */,
+				F2D081A31EAA62F3001B8292 /* PVOnboardView.m in Sources */,
+				F2D081A01EAA62F3001B8292 /* PVOnboardFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

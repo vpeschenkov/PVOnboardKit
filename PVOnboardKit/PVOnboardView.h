@@ -25,9 +25,10 @@
 
 @import UIKit;
 
-@protocol PVOnboardPage;
 @protocol PVOnboardViewDelegate;
 @protocol PVOnboardViewDataSource;
+
+@protocol PVOnboardPage;
 
 @class TAPageControl;
 
@@ -120,31 +121,6 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
 @end
 
 /**
- *  The PVOnboardView delegate protocol
- */
-@protocol PVOnboardViewDelegate <NSObject>
-
-@optional
-/**
- *  Called when a user did touch on the left action button.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
- */
-- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
-
-@optional
-/**
- *  Called when a user did touch on the right action button.
- *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
- */
-- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
-
-@end
-
-/**
  *  The PVOnboardView data source protocol.
  */
 @protocol PVOnboardViewDataSource <NSObject>
@@ -207,6 +183,39 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
  *  @return Return the string that should use as a title.
  */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ *  Requests a bottom padding for the footer view. Default is 0.
+ *
+ *  @param onboardView The onboard view.
+ */
+- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView;
+
+@end
+
+/**
+ *  The PVOnboardView delegate protocol
+ */
+@protocol PVOnboardViewDelegate <NSObject>
+
+@optional
+/**
+ *  Called when a user did touch on the left action button.
+ *
+ *  @param onboardView The onboard view.
+ *  @param index The index of a page.
+ */
+- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ *  Called when a user did touch on the right action button.
+ *
+ *  @param onboardView The onboard view.
+ *  @param index The index of a page.
+ */
+- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 
 @end
 

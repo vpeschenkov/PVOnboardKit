@@ -23,22 +23,23 @@
  THE SOFTWARE.
  */
 
-@import TAPageControl;
-
 #import "PVOnboardView.h"
 #import "PVOnboardPage.h"
+#import "PVOnboardFooterView.h"
 
-@interface PVOnboardView ()<UIScrollViewDelegate>
+@import TAPageControl;
 
-@property (nonatomic, strong) UIButton *leftActionButton;
-@property (nonatomic, strong) UIButton *rightActionButton;
+@interface PVOnboardView ()<UIScrollViewDelegate, PVOnboardFooterViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
-@property (nonatomic, strong) TAPageControl *pageControl;
+
+@property (nonatomic, strong) PVOnboardFooterView *footerView;
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
 @property (nonatomic, strong) NSMutableArray<UIView<PVOnboardPage> *> *views;
+
+@property (nonatomic, readonly) CGFloat footerBottomPadding;
 
 @property (nonatomic, readonly) UIEdgeInsets insets;
 
@@ -46,39 +47,18 @@
 
 @implementation PVOnboardView
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initViews];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _views = [[NSMutableArray alloc] init];
-        
-        _backgroundImageView = [[UIImageView alloc] init];
-        _backgroundImageView.contentMode = UIViewContentModeCenter;
-        [self addSubview:_backgroundImageView];
-        
-        _scrollView = [[UIScrollView alloc] init];
-        _scrollView.showsHorizontalScrollIndicator = NO;
-        _scrollView.pagingEnabled = YES;
-        _scrollView.delegate = self;
-        [self addSubview:_scrollView];
-        
-        _leftActionButton = [[UIButton alloc] init];
-        _leftActionButton.hidden = YES;
-        [_leftActionButton addTarget:self
-                              action:@selector(leftActionButtonEventHandler:)
-                    forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_leftActionButton];
-        
-        _rightActionButton = [[UIButton alloc] init];
-        _rightActionButton.hidden = YES;
-        [_rightActionButton addTarget:self
-                               action:@selector(rightActionButtonEventHandler:)
-                     forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:_rightActionButton];
-        
-        _pageControl = [[TAPageControl alloc] init];
-        _pageControl.hidesForSinglePage = YES;
-        _pageControl.shouldResizeFromCenter = NO;
-        [self addSubview:_pageControl];
+        [self initViews];
     }
     return self;
 }
@@ -97,25 +77,13 @@
         [self.scrollView addSubview:view];
     }];
     
+    CGSize footerViewSize = [self.footerView sizeThatFits:CGSizeMake(self.bounds.size.width, CGFLOAT_MAX)];
+    self.footerView.frame = CGRectMake(0.0f,
+                                       self.bounds.size.height - footerViewSize.height - self.footerBottomPadding,
+                                       footerViewSize.width,
+                                       footerViewSize.height);
+    
     self.scrollView.contentSize = CGSizeMake(self.views.count * self.scrollView.bounds.size.width, self.scrollView.bounds.size.height);
-    
-    CGSize leftActionButtonSize = [self.leftActionButton sizeThatFits:CGSizeMake(self.bounds.size.width, CGFLOAT_MAX)];
-    self.leftActionButton.frame = CGRectMake(self.insets.left,
-                                             self.bounds.size.height - leftActionButtonSize.height - self.insets.left - self.insets.right,
-                                             leftActionButtonSize.width,
-                                             leftActionButtonSize.height);
-    
-    CGSize rightActionButtonSize = [self.rightActionButton sizeThatFits:CGSizeMake(self.bounds.size.width, CGFLOAT_MAX)];
-    self.rightActionButton.frame = CGRectMake(self.bounds.size.width - rightActionButtonSize.width - self.insets.left,
-                                              self.bounds.size.height - rightActionButtonSize.height - self.insets.left - self.insets.right,
-                                              rightActionButtonSize.width,
-                                              rightActionButtonSize.height);
-    
-    CGFloat pageControlYAdditionalOffset = 47.0f;
-    self.pageControl.frame = CGRectMake((self.bounds.size.width - self.pageControl.bounds.size.width) / 2.0f,
-                                        self.bounds.size.height - self.pageControl.bounds.size.height - pageControlYAdditionalOffset,
-                                        self.pageControl.bounds.size.width,
-                                        self.pageControl.bounds.size.height);
 }
 
 #pragma mark - UIScrollViewDelegate<NSObject>
@@ -123,7 +91,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSAssert(self.dataSource, @"The data source must be not a nil!");
     
-    NSUInteger currentPageIndex = self.pageControl.currentPage;
+    NSUInteger currentPageIndex = self.footerView.pageControl.currentPage;
     NSUInteger nextPageIndex = round(scrollView.contentOffset.x / scrollView.bounds.size.width);
     if (nextPageIndex != currentPageIndex) {
         UIView<PVOnboardPage> *currentPageView = self.views[currentPageIndex];
@@ -139,7 +107,7 @@
         
         [self setUpActionButtonsWithIndex:nextPageIndex];
         
-        self.pageControl.currentPage = nextPageIndex;
+        self.footerView.pageControl.currentPage = nextPageIndex;
         
         if ([currentPageView respondsToSelector:@selector(didContentHide)]) {
             [currentPageView didContentHide];
@@ -156,13 +124,13 @@
 #pragma mark - Public Methods
 
 - (void)scrollToTheNextPage:(BOOL)animated {
-    NSUInteger currentPageIndex = self.pageControl.currentPage + 1;
+    NSUInteger currentPageIndex = self.footerView.pageControl.currentPage + 1;
     [self.scrollView setContentOffset:CGPointMake(currentPageIndex * self.scrollView.bounds.size.width, 0.0f)
                              animated:YES];
 }
 
 - (void)scrollToThePreviouslyPage:(BOOL)animated {
-    NSUInteger currentPageIndex = self.pageControl.currentPage - 1;
+    NSUInteger currentPageIndex = self.footerView.pageControl.currentPage - 1;
     [self.scrollView setContentOffset:CGPointMake(currentPageIndex * self.scrollView.bounds.size.width, 0.0f)
                              animated:YES];
 }
@@ -177,7 +145,7 @@
         [self.views addObject:[self.dataSource onboardView:self viewForPageAtIndex:i]];
     }
     
-    NSUInteger pageIndex = self.pageControl.currentPage;
+    NSUInteger pageIndex = self.footerView.pageControl.currentPage;
     UIView<PVOnboardPage> *pageView = self.views[pageIndex];
     if ([pageView respondsToSelector:@selector(willContentShow)]) {
         [pageView willContentShow];
@@ -189,49 +157,49 @@
         [pageView didContentShow];
     }
     
-    self.pageControl.numberOfPages = numberOfPagesInOneboardView;
+    self.footerView.pageControl.numberOfPages = numberOfPagesInOneboardView;
     
     [self setNeedsLayout];
 }
 
 - (void)setUpLeftActionButtonWithBlock:(nonnull PVOnboardViewConfigureActionButtonBlock)block {
-    block(self.leftActionButton);
+    block(self.footerView.leftActionButton);
 }
 
 - (void)setUpRightActionButtonWithBlock:(nonnull PVOnboardViewConfigureActionButtonBlock)block {
-    block(self.rightActionButton);
+    block(self.footerView.rightActionButton);
 }
 
 - (Class)dotViewClass {
-    return self.pageControl.dotViewClass;
+    return self.footerView.pageControl.dotViewClass;
 }
 
 - (void)setDotViewClass:(Class)dotViewClass {
-    self.pageControl.dotViewClass = dotViewClass;
+    self.footerView.pageControl.dotViewClass = dotViewClass;
 }
 
 - (UIImage *)dotImage {
-    return self.pageControl.dotImage;
+    return self.footerView.pageControl.dotImage;
 }
 
 - (void)setDotImage:(UIImage *)dotImage {
-    self.pageControl.dotImage = dotImage;
+    self.footerView.pageControl.dotImage = dotImage;
 }
 
 - (UIImage *)currentDotImage {
-    return self.pageControl.currentDotImage;
+    return self.footerView.pageControl.currentDotImage;
 }
 
 - (void)setCurrentDotImage:(UIImage *)currentDotImage {
-    self.pageControl.currentDotImage = currentDotImage;
+    self.footerView.pageControl.currentDotImage = currentDotImage;
 }
 
 - (CGSize)dotSize {
-    return self.pageControl.dotSize;
+    return self.footerView.pageControl.dotSize;
 }
 
 - (void)setDotSize:(CGSize)dotSize {
-    self.pageControl.dotSize = dotSize;
+    self.footerView.pageControl.dotSize = dotSize;
 }
 
 - (NSInteger)spacingBetweenDots {
@@ -239,7 +207,7 @@
 }
 
 - (void)setSpacingBetweenDots:(NSInteger)spacingBetweenDots {
-    self.pageControl.spacingBetweenDots = spacingBetweenDots;
+    self.footerView.pageControl.spacingBetweenDots = spacingBetweenDots;
 }
 
 - (UIImage *)backgroundImage {
@@ -258,54 +226,93 @@
     self.backgroundImageView.contentMode = backgroundImageContentMode;
 }
 
-#pragma mark - Event Handlers
+#pragma mark - PVOnboardFooterViewDelegate <NSObject>
 
-- (void)leftActionButtonEventHandler:(UIButton *)button {
+- (void)footerViewdidTouchLeftActionButton:(nonnull PVOnboardFooterView *)footerView {
     if ([self.delegate respondsToSelector:@selector(onboardView:didTouchOnLeftActionButtonAtIndex:)]) {
-        [self.delegate onboardView:self didTouchOnLeftActionButtonAtIndex:self.pageControl.currentPage];
+        [self.delegate onboardView:self didTouchOnLeftActionButtonAtIndex:self.footerView.pageControl.currentPage];
     }
 }
 
-- (void)rightActionButtonEventHandler:(UIButton *)button {
+- (void)footerViewdidTouchRightActionButton:(nonnull PVOnboardFooterView *)footerView {
     if ([self.delegate respondsToSelector:@selector(onboardView:didTouchOnRightActionButtonAtIndex:)]) {
-        [self.delegate onboardView:self didTouchOnRightActionButtonAtIndex:self.pageControl.currentPage];
+        [self.delegate onboardView:self didTouchOnRightActionButtonAtIndex:self.footerView.pageControl.currentPage];
     }
 }
 
 #pragma mark - Private Methods
 
+- (void)initViews {
+    _views = [[NSMutableArray alloc] init];
+    
+    _backgroundImageView = [[UIImageView alloc] init];
+    _backgroundImageView.contentMode = UIViewContentModeCenter;
+    [self addSubview:_backgroundImageView];
+    
+    _scrollView = [[UIScrollView alloc] init];
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    _scrollView.pagingEnabled = YES;
+    _scrollView.delegate = self;
+    [self addSubview:_scrollView];
+    
+    _footerView = [[PVOnboardFooterView alloc] init];
+    _footerView.delegate = self;
+    [self addSubview:_footerView];
+}
+
 - (UIEdgeInsets)insets {
     return UIEdgeInsetsMake(16.0f, 16.0f, 16.0f, 16.0f);
 }
 
+- (CGFloat)footerBottomPadding {
+    if ([self.dataSource respondsToSelector:@selector(onboardViewFooterBottomPadding:)]) {
+        return [self.dataSource onboardViewFooterBottomPadding:self];
+    }
+    return 0.0f;
+}
+
 - (void)setUpActionButtonsWithIndex:(NSInteger)index {
-    // The left action button
+    [self setUpLeftActionButtonsWithIndex:index];
+    [self setUpRightActionButtonsWithIndex:index];
+    
+    // Update the footer view
+    [self.footerView setNeedsLayout];
+}
+
+- (void)setUpLeftActionButtonsWithIndex:(NSInteger)index {
     if ([self.dataSource respondsToSelector:@selector(onboardView:shouldHideLeftActionButtonForPageAtIndex:)]) {
-        self.leftActionButton.hidden = [self.dataSource onboardView:self shouldHideLeftActionButtonForPageAtIndex:index];
+        self.footerView.leftActionButton.hidden = [self.dataSource onboardView:self
+                                      shouldHideLeftActionButtonForPageAtIndex:index];
     }
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:titleForLeftActionButtonAtIndex:)]) {
-        NSString *actionButtonTitle = [self.dataSource onboardView:self titleForLeftActionButtonAtIndex:index];
-        [self.leftActionButton setTitle:actionButtonTitle forState:UIControlStateNormal];
-        [self.leftActionButton setTitle:actionButtonTitle forState:UIControlStateHighlighted];
-        [self.leftActionButton setTitle:actionButtonTitle forState:UIControlStateDisabled];
-        [self.leftActionButton setTitle:actionButtonTitle forState:UIControlStateSelected];
-        [self.leftActionButton setTitle:actionButtonTitle forState:UIControlStateFocused];
+        NSString *title = [self.dataSource onboardView:self titleForLeftActionButtonAtIndex:index];
+        [self setUpdateActionButton:self.footerView.leftActionButton
+                          withTitle:title];
     }
-    
-    // The right action button
+}
+
+- (void)setUpRightActionButtonsWithIndex:(NSInteger)index {
     if ([self.dataSource respondsToSelector:@selector(onboardView:shouldHideRightActionButtonForPageAtIndex:)]) {
-        self.rightActionButton.hidden = [self.dataSource onboardView:self shouldHideRightActionButtonForPageAtIndex:index];
+        self.footerView.rightActionButton.hidden = [self.dataSource onboardView:self
+                                      shouldHideRightActionButtonForPageAtIndex:index];
     }
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:titleForRightActionButtonAtIndex:)]) {
-        NSString *actionButtonTitle = [self.dataSource onboardView:self titleForRightActionButtonAtIndex:index];
-        [self.rightActionButton setTitle:actionButtonTitle forState:UIControlStateNormal];
-        [self.rightActionButton setTitle:actionButtonTitle forState:UIControlStateHighlighted];
-        [self.rightActionButton setTitle:actionButtonTitle forState:UIControlStateDisabled];
-        [self.rightActionButton setTitle:actionButtonTitle forState:UIControlStateSelected];
-        [self.rightActionButton setTitle:actionButtonTitle forState:UIControlStateFocused];
+        NSString *title = [self.dataSource onboardView:self titleForRightActionButtonAtIndex:index];
+        [self setUpdateActionButton:self.footerView.rightActionButton
+                          withTitle:title];
     }
+}
+
+
+- (void)setUpdateActionButton:(UIButton *)actionButton
+                    withTitle:(NSString *)title {
+    [actionButton setTitle:title forState:UIControlStateNormal];
+    [actionButton setTitle:title forState:UIControlStateHighlighted];
+    [actionButton setTitle:title forState:UIControlStateDisabled];
+    [actionButton setTitle:title forState:UIControlStateSelected];
+    [actionButton setTitle:title forState:UIControlStateFocused];
 }
 
 @end

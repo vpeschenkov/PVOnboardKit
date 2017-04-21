@@ -6,7 +6,7 @@
 
 Make an app tutorial **as easy as possible**!
 
-**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1]. 
+**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1].
 
 Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
@@ -15,7 +15,7 @@ Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] i
 - [x] Add an example on Swift
 - [x] Add an example on Objective-C
 - [ ] Add reuse ability to [PVOnboardPage][6]
-- [ ] Bring out bottom controls from [PVOnboardView][7]
+- [x] Bring out bottom controls from [PVOnboardView][7]
 
 # Requirements
 Xcode 8. Ready for use on iOS 8+
