@@ -20,7 +20,6 @@
 ### Improvements
 - Extracted bottom control panel into ```PVOnboardFooterView``` class.
 
-## 0.1.0
+# Add an existing project to GitHub.
 
-### Added
-- Added a project to GitHub.
+## 0.1.0
