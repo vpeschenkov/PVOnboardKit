@@ -6,7 +6,7 @@
 
 Make an app tutorial **as easy as possible**!
 
-**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1].
+**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1]. 
 
 Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
@@ -127,6 +127,14 @@ pod 'PVOnboardKit'
 *  @return Return the string that should use as a title.
 */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ *  Requests a bottom padding for the footer view. Default is 0.
+ *
+ *  @param onboardView The onboard view.
+ */
+- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView;
 ```
 
 # Thanks
