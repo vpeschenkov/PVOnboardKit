@@ -8,8 +8,6 @@
 ### Fixed for any bug fixes.
 ```
 
-# Fix typos and refactoring.
-
 ## 1.0.0
 
 ### Changed
