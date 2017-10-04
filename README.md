@@ -11,7 +11,7 @@ Make an app tutorial **as easy as possible**!
 Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
 # Requirements
-Xcode 8. Ready for use on iOS 8+
+Xcode 9. Ready for use on iOS 9+
 
 # Install
 Adding the following to your Podfile and running pod install should do the trick:
