@@ -10,6 +10,19 @@
 
 # Fix typos and refactoring.
 
+## 1.0.0
+
+### Fixed
+
+
+### Changed
+- Changed Swift version to Swift 4.
+- Renamed ```- (void)scrollToTheNextPage:animated``` to ```- (void)scrollToNextPage:animated```.
+- Renamed ```- (void)scrollToThePreviouslyPage:animated``` to ```- (void)scrollToPreviouslyPage:animated```.
+
+### Improvements
+- Improved compatibility with Swift.
+
 ## 0.2.0
 
 ### Added
