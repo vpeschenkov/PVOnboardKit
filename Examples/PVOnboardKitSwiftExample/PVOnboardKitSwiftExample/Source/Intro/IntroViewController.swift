@@ -47,11 +47,10 @@ class IntroViewController: UIViewController {
     }
     
     private func setUpOnboard() {
-        let setUpActionButtonBlock: PVOnboardViewConfigureActionButtonBlock = {
+        let setUpActionButtonBlock: OnboardViewConfigureActionButtonBlock = {
             (button) in
             
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
-            
             button.setTitleColor(UIColor.white, for: .normal)
             button.setTitleColor(UIColor.white, for: .highlighted)
         }
@@ -69,27 +68,27 @@ class IntroViewController: UIViewController {
     }
 }
 
-extension IntroViewController: PVOnboardViewDelegate {
-    func onboardView(_ onboardView: PVOnboardView, didTouchOnLeftActionButtonAt index: Int) {
+extension IntroViewController: OnboardViewDelegate {
+    func onboardView(_ onboardView: OnboardView, didTouchOnLeftActionButtonAt index: Int) {
         NSLog(NSLocalizedString("SKIP", comment: ""))
     }
     
-    func onboardView(_ onboardView: PVOnboardView, didTouchOnRightActionButtonAt index: Int) {
+    func onboardView(_ onboardView: OnboardView, didTouchOnRightActionButtonAt index: Int) {
         if index < 2 {
-            onboardView.scroll(toTheNextPage: true)
+            onboardView.scrollToNextPage(animated: true)
         }
         else {
-            NSLog(NSLocalizedString("SKIP", comment: ""))
+            NSLog(NSLocalizedString("START", comment: ""))
         }
     }
 }
 
-extension IntroViewController: PVOnboardViewDataSource {
-    public func numberOfPages(inOneboardView onboardView: PVOnboardView) -> Int {
+extension IntroViewController: OnboardViewDataSource {
+    func numberOfPages(in onboardView: OnboardView) -> Int {
         return model.numberOfPages()
     }
 
-    public func onboardView(_ onboardView: PVOnboardView, viewForPageAt index: Int) -> UIView {
+    func onboardView(_ onboardView: OnboardView, viewForPageAtIndex index: Int) -> UIView & OnboardPage {
         let pageModel = model.pageModel(forPageAtIndex: index)
         
         let page = IntroPage()
@@ -100,19 +99,19 @@ extension IntroViewController: PVOnboardViewDataSource {
         return page
     }
     
-    public func onboardView(_ onboardView: PVOnboardView, shouldHideRightActionButtonForPageAt index: Int) -> Bool {
+    public func onboardView(_ onboardView: OnboardView, shouldHideRightActionButtonForPageAt index: Int) -> Bool {
         return model.shouldHideRightActionButton(forPageAtIndex: index)
     }
     
-    public func onboardView(_ onboardView: PVOnboardView, titleForRightActionButtonAt index: Int) -> String?  {
-        return model.titleForRightActionButton(atIndex: index)
+    public func onboardView(_ onboardView: OnboardView, titleForRightActionButtonAt index: Int) -> String?  {
+        return model.rightActionButtonTitle(atIndex: index)
     }
     
-    public func onboardView(_ onboardView: PVOnboardView, shouldHideLeftActionButtonForPageAt index: Int) -> Bool {
+    public func onboardView(_ onboardView: OnboardView, shouldHideLeftActionButtonForPageAt index: Int) -> Bool {
         return model.shouldHideLeftActionButton(forPageAtIndex: index)
     }
     
-    public func onboardView(_ onboardView: PVOnboardView, titleForLeftActionButtonAt index: Int) -> String? {
-        return model.titleForLeftActionButton(atIndex: index)
+    public func onboardView(_ onboardView: OnboardView, titleForLeftActionButtonAt index: Int) -> String? {
+        return model.leftActionButtonTitle(atIndex: index)
     }
 }

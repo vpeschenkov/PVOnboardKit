@@ -73,10 +73,10 @@
 
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index {
     if (index < 2) {
-        [onboardView scrollToTheNextPage:YES];
+        [onboardView scrollToNextPage:YES];
     }
     else {
-        NSLog(NSLocalizedString(@"SKIP", nil));
+        NSLog(NSLocalizedString(@"START", nil));
     }
 }
 

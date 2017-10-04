@@ -30,7 +30,7 @@ class IntroPageModel {
     private (set) var subtitle: String!
     private (set) var imageName: String!
     
-    public class func pageModel(withTitle title: String!, subtitle: String!, imageName: String!) -> IntroPageModel {
+    public class func pageModel(title: String!, subtitle: String!, imageName: String!) -> IntroPageModel {
         let pageModel = IntroPageModel()
         pageModel.title = title
         pageModel.subtitle = subtitle

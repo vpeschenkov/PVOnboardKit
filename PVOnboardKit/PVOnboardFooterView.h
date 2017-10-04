@@ -37,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
  * The PVOnboardFooterView is a view that contains bottom controls such as a 
  * left action button, right action button and page control.
  */
+NS_SWIFT_NAME(OnboardFooterView)
 @interface PVOnboardFooterView : UIView
 
 /**
@@ -64,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The PVOnboardFooterView delegate protocol.
  */
+NS_SWIFT_NAME(OnboardFooterViewDelegate)
 @protocol PVOnboardFooterViewDelegate <NSObject>
 
 @required

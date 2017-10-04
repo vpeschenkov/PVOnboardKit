@@ -29,17 +29,17 @@ class IntroModel {
     public lazy var pages: [IntroPageModel] = {
         var pages = [IntroPageModel]()
         pages.append(IntroPageModel.pageModel(
-            withTitle: NSLocalizedString("mars.title", comment: ""),
+            title: NSLocalizedString("mars.title", comment: ""),
             subtitle: NSLocalizedString("mars.subtitle", comment: ""),
-            imageName: "IntroIMarsImage"
+            imageName: "IntroMarsImage"
         ))
         pages.append(IntroPageModel.pageModel(
-            withTitle: NSLocalizedString("venus.title", comment: ""),
+            title: NSLocalizedString("venus.title", comment: ""),
             subtitle: NSLocalizedString("venus.subtitle", comment: ""),
             imageName: "IntroVenusImage"
         ))
         pages.append(IntroPageModel.pageModel(
-            withTitle: NSLocalizedString("jupiter.title", comment: ""),
+            title: NSLocalizedString("jupiter.title", comment: ""),
             subtitle: NSLocalizedString("jupiter.subtitle", comment: ""),
             imageName: "IntroJupiterImage"
         ))
@@ -58,7 +58,7 @@ class IntroModel {
         return false
     }
     
-    func titleForLeftActionButton(atIndex index: Int) -> String {
+    func leftActionButtonTitle(atIndex index: Int) -> String {
         return index < 2 ? NSLocalizedString("SKIP", comment: "") : ""
     }
     
@@ -66,7 +66,7 @@ class IntroModel {
         return false
     }
     
-    func titleForRightActionButton(atIndex index: Int) -> String {
+    func rightActionButtonTitle(atIndex index: Int) -> String {
         return index < 2 ? NSLocalizedString("START", comment: "") : NSLocalizedString("NEXT", comment: "")
     }
 }

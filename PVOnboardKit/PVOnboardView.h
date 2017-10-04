@@ -37,11 +37,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The type of block to update an action button appearance.
  */
+NS_SWIFT_NAME(OnboardViewConfigureActionButtonBlock)
 typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actionButton);
 
 /**
  * PVOnboardView is a view that shows a tutorial for users.
  */
+NS_SWIFT_NAME(OnboardView)
 @interface PVOnboardView : UIView
 
 /**
@@ -90,19 +92,19 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
 @property (nonatomic, assign) UIViewContentMode backgroundImageContentMode;
 
 /**
- * Scroll to the next page
+ * Scroll to the next page.
  * @param animated The flag that indicate about an animation while scrolling.
  */
-- (void)scrollToTheNextPage:(BOOL)animated;
+- (void)scrollToNextPage:(BOOL)animated NS_SWIFT_NAME(scrollToNextPage(animated:));
 
 /**
- * Scroll to the previously page
+ * Scroll to the previously page.
  * @param animated The flag that indicate about an animation while scrolling.
  */
-- (void)scrollToThePreviouslyPage:(BOOL)animated;
+- (void)scrollToPreviouslyPage:(BOOL)animated NS_SWIFT_NAME(scrollToPreviouslyPage(animated:));
 
 /**
- * Reloads data
+ * Reloads data.
  */
 - (void)reloadData;
 
@@ -123,6 +125,7 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
 /**
  *  The PVOnboardView data source protocol.
  */
+NS_SWIFT_NAME(OnboardViewDataSource)
 @protocol PVOnboardViewDataSource <NSObject>
 
 @required
@@ -132,7 +135,7 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
  *  @param onboardView The onboard view.
  *  @return The number of pages.
  */
-- (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView;
+- (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(numberOfPages(in:));
 
 @required
 /**
@@ -142,7 +145,7 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
  *  @param index The index of a requested page.
  *  @return The view that conforms to PVOnboardPage protocol.
  */
-- (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index;
+- (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index NS_SWIFT_NAME(onboardView(_:viewForPageAtIndex:));
 
 @optional
 /**
@@ -190,13 +193,14 @@ typedef void(^PVOnboardViewConfigureActionButtonBlock)(UIButton * _Nonnull actio
  *
  *  @param onboardView The onboard view.
  */
-- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView;
+- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(onboardViewFooterBottomPadding(paddingForPageAtIndex:));
 
 @end
 
 /**
  *  The PVOnboardView delegate protocol
  */
+NS_SWIFT_NAME(OnboardViewDelegate)
 @protocol PVOnboardViewDelegate <NSObject>
 
 @optional

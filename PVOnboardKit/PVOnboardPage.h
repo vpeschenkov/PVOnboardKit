@@ -28,8 +28,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * The PVOnboardPage protocol
+ * The PVOnboardPage protocol.
  */
+NS_SWIFT_NAME(OnboardPage)
 @protocol PVOnboardPage <NSObject>
 
 @optional

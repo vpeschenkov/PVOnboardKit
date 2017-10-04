@@ -32,6 +32,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor = [UIColor blackColor];
+        
         _onboardView = [[PVOnboardView alloc] init];
         _onboardView.backgroundColor = [UIColor blackColor];
         [self addSubview:_onboardView];
@@ -42,10 +44,16 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.onboardView.frame = CGRectMake(0.0f,
-                                        0.0f,
-                                        self.bounds.size.width,
-                                        self.bounds.size.height);
+    CGFloat onboardViewX = 0.0f;
+    CGFloat onboardViewY = 0.0f;
+    CGFloat onboardViewWidth = self.bounds.size.width;
+    CGFloat onboardViewHeight = self.bounds.size.height;
+    if (@available(iOS 11, *)) {
+        onboardViewY = self.safeAreaInsets.top;
+        onboardViewWidth = self.bounds.size.width - self.safeAreaInsets.left - self.safeAreaInsets.right;
+        onboardViewHeight = self.bounds.size.height - self.safeAreaInsets.top - self.safeAreaInsets.bottom;
+    }
+    self.onboardView.frame = CGRectMake(onboardViewX, onboardViewY, onboardViewWidth, onboardViewHeight);
 }
 
 @end

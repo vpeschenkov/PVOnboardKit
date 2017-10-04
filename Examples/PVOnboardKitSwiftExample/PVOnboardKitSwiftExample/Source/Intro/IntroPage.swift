@@ -27,7 +27,7 @@
 import UIKit
 import PVOnboardKit
 
-class IntroPage: UIView {
+class IntroPage: UIView, OnboardPage {
     public var title: String! {
         get {
             return titleLabel.text
@@ -93,35 +93,41 @@ class IntroPage: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        let titleLabelWidthInsets = CGFloat(48.0)
         let titleLabelSize = titleLabel.sizeThatFits(CGSize(
-            width: bounds.size.width - 48.0,
+            width: bounds.size.width - titleLabelWidthInsets,
             height: CGFloat.greatestFiniteMagnitude
         ))
         
+        let titleLabelHeightMultiplier = CGFloat(0.14)
         titleLabel.frame = CGRect(
             x: (bounds.size.width - titleLabelSize.width) / 2.0,
-            y: bounds.size.height * 0.14 - titleLabelSize.height,
+            y: bounds.size.height * titleLabelHeightMultiplier - titleLabelSize.height,
             width: titleLabelSize.width,
             height: titleLabelSize.height
         )
         
         if let imageSize = imageView.image?.size {
-            let imageScale = bounds.size.height * 0.56 / imageSize.height
+            let imageViewHeightMultiplier = CGFloat(0.56)
+            let imageViewScale = (bounds.size.height * imageViewHeightMultiplier) / imageSize.height
+            let imageViewWidth = imageSize.width * imageViewScale
+            let imageViewHeight = imageSize.height * imageViewScale
             imageView.frame = CGRect(
-                x: fabs((imageSize.width * imageScale) - bounds.size.width) / 2.0,
+                x: (bounds.size.width - imageViewWidth) / 2.0,
                 y: titleLabel.frame.maxY,
-                width: imageSize.width * imageScale,
-                height: imageSize.height * imageScale
+                width: imageViewWidth,
+                height: imageViewHeight
             )
-
         }
         
+        let subtitleLabelWidthInsets = CGFloat(48.0)
         let subtitleLabelSize = subtitleLabel.sizeThatFits(CGSize(
-            width: bounds.size.width - 48.0,
+            width: bounds.size.width - subtitleLabelWidthInsets,
             height: CGFloat.greatestFiniteMagnitude
         ))
         
-        let subtitleYPosition = imageView.frame.maxY + ((bounds.size.height * 0.18 - subtitleLabelSize.height) / 2.0);
+        let subtitleLabelHeightMultiplier = CGFloat(0.18)
+        let subtitleYPosition = imageView.frame.maxY + ((bounds.size.height * subtitleLabelHeightMultiplier - subtitleLabelSize.height) / 2.0)
         self.subtitleLabel.frame = CGRect(
             x: (bounds.size.width - subtitleLabelSize.width) / 2.0,
             y: subtitleYPosition,

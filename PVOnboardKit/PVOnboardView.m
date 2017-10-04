@@ -89,7 +89,7 @@
 #pragma mark - UIScrollViewDelegate<NSObject>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSAssert(self.dataSource, @"The data source must be not a nil!");
+    NSAssert(self.dataSource, @"The data source must be not null!");
     
     NSUInteger currentPageIndex = self.footerView.pageControl.currentPage;
     NSUInteger nextPageIndex = round(scrollView.contentOffset.x / scrollView.bounds.size.width);
@@ -123,20 +123,20 @@
 
 #pragma mark - Public Methods
 
-- (void)scrollToTheNextPage:(BOOL)animated {
+- (void)scrollToNextPage:(BOOL)animated {
     NSUInteger currentPageIndex = self.footerView.pageControl.currentPage + 1;
     [self.scrollView setContentOffset:CGPointMake(currentPageIndex * self.scrollView.bounds.size.width, 0.0f)
                              animated:YES];
 }
 
-- (void)scrollToThePreviouslyPage:(BOOL)animated {
+- (void)scrollToPreviouslyPage:(BOOL)animated {
     NSUInteger currentPageIndex = self.footerView.pageControl.currentPage - 1;
     [self.scrollView setContentOffset:CGPointMake(currentPageIndex * self.scrollView.bounds.size.width, 0.0f)
                              animated:YES];
 }
 
 - (void)reloadData {
-    NSAssert(self.dataSource, @"The data source must be not a nil!");
+    NSAssert(self.dataSource, @"The data source must be not null!");
     
     [self.views removeAllObjects];
     

@@ -27,12 +27,14 @@ import UIKit
 import PVOnboardKit
 
 class IntroView: UIView {
-    private (set) var onboardView: PVOnboardView!
+    private (set) var onboardView: OnboardView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        onboardView = PVOnboardView()
+        self.backgroundColor = UIColor.black
+        
+        onboardView = OnboardView()
         onboardView.backgroundColor = UIColor.black
         self.addSubview(onboardView)
     }
@@ -44,11 +46,21 @@ class IntroView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        let onboardViewX = CGFloat(0.0)
+        var onboardViewY = CGFloat(0.0)
+        var onboardViewWidth = self.bounds.size.width
+        var onboardViewHeight = self.bounds.size.height
+        if #available(iOS 11, *) {
+            onboardViewY = self.safeAreaInsets.top
+            onboardViewWidth = self.bounds.size.width - self.safeAreaInsets.left - self.safeAreaInsets.right
+            onboardViewHeight = self.bounds.size.height - self.safeAreaInsets.top - self.safeAreaInsets.bottom
+        }
+        
         onboardView.frame = CGRect(
-            x: 0.0,
-            y: 0.0,
-            width: self.bounds.size.width,
-            height: self.bounds.size.height
+            x: onboardViewX,
+            y: onboardViewY,
+            width: onboardViewWidth,
+            height: onboardViewHeight
         )
     }
 }

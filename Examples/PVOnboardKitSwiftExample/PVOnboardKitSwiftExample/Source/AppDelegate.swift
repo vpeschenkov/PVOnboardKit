@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let rootViewController = IntroViewController();
+        let rootViewController = IntroViewController()
         let navigationController = UINavigationController(rootViewController: rootViewController)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

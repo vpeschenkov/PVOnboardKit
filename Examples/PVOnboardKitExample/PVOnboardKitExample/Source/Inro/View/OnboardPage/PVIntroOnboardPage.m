@@ -45,6 +45,7 @@
         [self addSubview:_titleLabel];
         
         _imageView = [[UIImageView alloc] init];
+        _imageView.layer.masksToBounds = YES;
         [self addSubview:_imageView];
         
         _subtitleLabel = [[UILabel alloc] init];
@@ -61,20 +62,27 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGSize titleLabelSize = [self.titleLabel sizeThatFits:CGSizeMake(self.bounds.size.width - 48.0f, CGFLOAT_MAX)];
+    CGFloat titleLabelWidthInsets = 48.0f;
+    CGFloat titleLabelHeightMultiplier = 0.14f;
+    CGSize titleLabelSize = [self.titleLabel sizeThatFits:CGSizeMake(self.bounds.size.width - titleLabelWidthInsets, CGFLOAT_MAX)];
     self.titleLabel.frame = CGRectMake((self.bounds.size.width - titleLabelSize.width) / 2.0f,
-                                       self.bounds.size.height * 0.14f - titleLabelSize.height,
+                                       (self.bounds.size.height * titleLabelHeightMultiplier) - titleLabelSize.height,
                                        titleLabelSize.width,
                                        titleLabelSize.height);
     
-    CGFloat imageViewHeightScale = (self.bounds.size.height * 0.56f) / self.imageView.image.size.height;
-    self.imageView.frame = CGRectMake(fabs((self.imageView.image.size.width * imageViewHeightScale) - self.bounds.size.width) / 2.0f,
+    CGFloat imageViewHeightMultiplier = 0.56f;
+    CGFloat imageViewScale = (self.bounds.size.height * imageViewHeightMultiplier) / self.imageView.image.size.height;
+    CGFloat imageViewWidth = self.imageView.image.size.width * imageViewScale;
+    CGFloat imageViewHeight = self.imageView.image.size.height * imageViewScale;
+    self.imageView.frame = CGRectMake((self.bounds.size.width - imageViewWidth) / 2.0f,
                                       CGRectGetMaxY(self.titleLabel.frame),
-                                      self.imageView.image.size.width * imageViewHeightScale,
-                                      self.imageView.image.size.height * imageViewHeightScale);
+                                      imageViewWidth,
+                                      imageViewHeight);
     
-    CGSize subtitleLabelSize = [self.subtitleLabel sizeThatFits:CGSizeMake(self.bounds.size.width - 48.0f, CGFLOAT_MAX)];
-    CGFloat subtitleYPosition = CGRectGetMaxY(self.imageView.frame) + ((self.bounds.size.height * 0.18f - subtitleLabelSize.height) / 2.0f);
+    CGFloat subtitleLabelWidthInsets = 48.0f;
+    CGFloat subtitleLabelHeightMultiplier = 0.18f;
+    CGSize subtitleLabelSize = [self.subtitleLabel sizeThatFits:CGSizeMake(self.bounds.size.width - subtitleLabelWidthInsets, CGFLOAT_MAX)];
+    CGFloat subtitleYPosition = CGRectGetMaxY(self.imageView.frame) + ((self.bounds.size.height * subtitleLabelHeightMultiplier - subtitleLabelSize.height) / 2.0f);
     self.subtitleLabel.frame = CGRectMake((self.bounds.size.width - subtitleLabelSize.width) / 2.0f,
                                           subtitleYPosition,
                                           subtitleLabelSize.width,
