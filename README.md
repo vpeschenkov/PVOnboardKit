@@ -10,13 +10,6 @@ Make an app tutorial **as easy as possible**!
 
 Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
-# Task Lists
-- [x] Add to [CocoaPods Specs][5]
-- [x] Add an example on Swift
-- [x] Add an example on Objective-C
-- [ ] Add reuse ability to [PVOnboardPage][6]
-- [x] Bring out bottom controls from [PVOnboardView][7]
-
 # Requirements
 Xcode 8. Ready for use on iOS 8+
 
@@ -31,111 +24,6 @@ pod 'PVOnboardKit'
 1. Implement [PVOnboardViewDelegate][8] and [PVOnboardViewDataSource][9] and assign to instance of [PVOnboardView][7]
 1. Call reloadData from instance of [PVOnboardView][7]
 1. Enjoy😎❕
-
-## Objective-C
-
-### Delegate
-```
-@optional
-/**
-*  Called when a user did touch on the left action button.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a page.
-*/
-- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
-```
-
-```
-@optional
-/**
-*  Called when a user did touch on the right action button.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a page.
-*/
-- (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
-```
-
-### DataSource
-```
-@required
-/**
-*  Requests a number of pages in a current onboard.
-*
-*  @param onboardView The onboard view.
-*  @return The number of pages.
-*/
-- (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView;
-```
-
-```
-@required
-/**
-*  Requests a page view for the page at index.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a requested page.
-*  @return The view that conforms to PVOnboardPage protocol.
-*/
-- (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index;
-```
-
-```
-@optional
-/**
-*  Requests a visible state for the right action button for page at index.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a requested page.
-*  @return Return YES if a action button should be visible or NO if shouldn't.
-*/
-- (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideRightActionButtonForPageAtIndex:(NSInteger)index;
-```
-
-```
-@optional
-/**
-*  Requests a title for the right action button for page at index.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a requested page.
-*  @return Return the string that should use as a title.
-*/
-- (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForRightActionButtonAtIndex:(NSInteger)index;
-```
-
-```
-@optional
-/**
-*  Requests a visible state for the left action button for page at index.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a requested page.
-*  @return Return YES if a action button should be visible or NO if shouldn't.
-*/
-- (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideLeftActionButtonForPageAtIndex:(NSInteger)index;
-```
-
-```
-@optional
-/**
-*  Requests a title for the left action button for page at index.
-*
-*  @param onboardView The onboard view.
-*  @param index The index of a requested page.
-*  @return Return the string that should use as a title.
-*/
-- (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
-
-@optional
-/**
- *  Requests a bottom padding for the footer view. Default is 0.
- *
- *  @param onboardView The onboard view.
- */
-- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView;
-```
 
 # Thanks
 
