@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D46B2D653830F3DADC91620A /* Pods_PVOnboardKitSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF620F625E822B5A8460871 /* Pods_PVOnboardKitSwiftExample.framework */; };
+		D46B2D653830F3DADC91620A /* Pods_PVOnboardKitSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF620F625E822B5A8460871 /* Pods_PVOnboardKitSwiftExample.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F29318E81EA2849D00F4EB57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F29318E71EA2849D00F4EB57 /* Assets.xcassets */; };
 		F29318F51EA2862600F4EB57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29318F31EA2862600F4EB57 /* AppDelegate.swift */; };
 		F29318F91EA2868A00F4EB57 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29318F81EA2868A00F4EB57 /* IntroViewController.swift */; };
@@ -397,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PVOnboardKitSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitSwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PVOnboardKitSwiftExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.peschenkov.PVOnboardKitSwiftExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
