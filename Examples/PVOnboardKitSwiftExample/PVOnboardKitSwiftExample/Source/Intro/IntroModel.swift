@@ -67,6 +67,6 @@ class IntroModel {
     }
     
     func rightActionButtonTitle(atIndex index: Int) -> String {
-        return index < 2 ? NSLocalizedString("START", comment: "") : NSLocalizedString("NEXT", comment: "")
+        return index < 2 ? NSLocalizedString("NEXT", comment: "") : NSLocalizedString("START", comment: "")
     }
 }
