@@ -25,10 +25,9 @@
 
 @import UIKit;
 
+@protocol PVOnboardPage;
 @protocol PVOnboardViewDelegate;
 @protocol PVOnboardViewDataSource;
-
-@protocol PVOnboardPage;
 
 @class TAPageControl;
 
@@ -47,12 +46,12 @@ NS_SWIFT_NAME(OnboardView)
 @interface PVOnboardView : UIView
 
 /**
- * The delegate for PVOnboardView.
+ * The delegate of PVOnboardView.
  */
 @property (nullable, nonatomic, weak) NSObject<PVOnboardViewDelegate> *delegate;
 
 /**
- * The data source for PVOnboardView.
+ * The data source of PVOnboardView.
  */
 @property (nullable, nonatomic, weak) NSObject<PVOnboardViewDataSource> *dataSource;
 
@@ -92,13 +91,13 @@ NS_SWIFT_NAME(OnboardView)
 @property (nonatomic, assign) UIViewContentMode backgroundImageContentMode;
 
 /**
- * Scroll to the next page.
+ * Scrolls to the next page.
  * @param animated The flag that indicate about an animation while scrolling.
  */
 - (void)scrollToNextPage:(BOOL)animated NS_SWIFT_NAME(scrollToNextPage(animated:));
 
 /**
- * Scroll to the previously page.
+ * Scrolls to the previously page.
  * @param animated The flag that indicate about an animation while scrolling.
  */
 - (void)scrollToPreviouslyPage:(BOOL)animated NS_SWIFT_NAME(scrollToPreviouslyPage(animated:));
@@ -109,13 +108,13 @@ NS_SWIFT_NAME(OnboardView)
 - (void)reloadData;
 
 /**
- * Set up or update the left action button apperence.
+ * Sets up or updates the left action button apperence.
  * @param block The block that invoked to update the action button apperence.
  */
 - (void)setUpLeftActionButtonWithBlock:(nonnull PVOnboardViewConfigureActionButtonBlock)block;
 
 /**
- * Set up or update the right action button apperence.
+ * Sets up or updates the right action button apperence.
  * @param block The block that invoked to update the action button apperence.
  */
 - (void)setUpRightActionButtonWithBlock:(nonnull PVOnboardViewConfigureActionButtonBlock)block;
@@ -130,9 +129,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 
 @required
 /**
- *  Requests a number of pages in a current onboard.
+ *  Requests a number of pages in current onboardView.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @return The number of pages.
  */
 - (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(numberOfPages(in:));
@@ -141,7 +140,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a page view for the page at index.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @param index The index of a requested page.
  *  @return The view that conforms to PVOnboardPage protocol.
  */
@@ -151,7 +150,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a visible state for the right action button for page at index.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @param index The index of a requested page.
  *  @return Return YES if a action button should be visible or NO if shouldn't.
  */
@@ -161,7 +160,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a title for the right action button for page at index.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @param index The index of a requested page.
  *  @return Return the string that should use as a title.
  */
@@ -171,7 +170,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a visible state for the left action button for page at index.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @param index The index of a requested page.
  *  @return Return YES if a action button should be visible or NO if shouldn't.
  */
@@ -181,7 +180,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a title for the left action button for page at index.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  *  @param index The index of a requested page.
  *  @return Return the string that should use as a title.
  */
@@ -191,7 +190,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  *  Requests a bottom padding for the footer view. Default is 0.
  *
- *  @param onboardView The onboard view.
+ *  @param onboardView The current onboardView.
  */
 - (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(onboardViewFooterBottomPadding(paddingForPageAtIndex:));
 
@@ -205,19 +204,19 @@ NS_SWIFT_NAME(OnboardViewDelegate)
 
 @optional
 /**
- *  Called when a user did touch on the left action button.
+ *  Invoked after a user did touch on the left action button.
  *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
+ *  @param onboardView The current onboardView.
+ *  @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Called when a user did touch on the right action button.
+ *  Invoked after a user did touch on the right action button.
  *
- *  @param onboardView The onboard view.
- *  @param index The index of a page.
+ *  @param onboardView The current onboardView.
+ *  @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 

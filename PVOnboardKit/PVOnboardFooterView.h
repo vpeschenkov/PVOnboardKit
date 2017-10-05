@@ -34,7 +34,7 @@ extern CGFloat const PVOnboardFooterViewHeight;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * The PVOnboardFooterView is a view that contains bottom controls such as a 
+ * The PVOnboardFooterView is a view that contains bottom controls such as the
  * left action button, right action button and page control.
  */
 NS_SWIFT_NAME(OnboardFooterView)
@@ -63,7 +63,7 @@ NS_SWIFT_NAME(OnboardFooterView)
 @end
 
 /**
- * The PVOnboardFooterView delegate protocol.
+ * The delegate of PVOnboardFooterView.
  */
 NS_SWIFT_NAME(OnboardFooterViewDelegate)
 @protocol PVOnboardFooterViewDelegate <NSObject>
