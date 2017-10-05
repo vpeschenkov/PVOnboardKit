@@ -56,27 +56,27 @@ NS_SWIFT_NAME(OnboardView)
 @property (nullable, nonatomic, weak) NSObject<PVOnboardViewDataSource> *dataSource;
 
 /**
- *  The Class of your custom UIView, make sure to respect the TAAbstractDotView class.
+ * The Class of your custom UIView, make sure to respect the TAAbstractDotView class.
  */
 @property (nonatomic, assign) Class dotViewClass;
 
 /**
- *  UIImage to represent a dot.
+ * UIImage to represent a dot.
  */
 @property (nullable, nonatomic, strong) UIImage *dotImage;
 
 /**
- *  UIImage to represent current page dot.
+ * UIImage to represent current page dot.
  */
 @property (nullable, nonatomic, strong) UIImage *currentDotImage;
 
 /**
- *  Dot size for dot views. Default is 8 by 8.
+ * Dot size for dot views. Default is 8 by 8.
  */
 @property (nonatomic, assign) CGSize dotSize;
 
 /**
- *  Spacing between two dot views. Default is 8.
+ * Spacing between two dot views. Default is 8.
  */
 @property (nonatomic, assign) NSInteger spacingBetweenDots;
 
@@ -130,101 +130,166 @@ NS_SWIFT_NAME(OnboardView)
 @end
 
 /**
- *  The PVOnboardView data source protocol.
+ * The PVOnboardView data source protocol.
  */
 NS_SWIFT_NAME(OnboardViewDataSource)
 @protocol PVOnboardViewDataSource <NSObject>
 
 @required
 /**
- *  Requests a number of pages in current onboardView.
+ * Requests a number of pages in current onboardView.
  *
- *  @param onboardView The current onboardView.
- *  @return The number of pages.
+ * @param onboardView The current onboardView.
+ * @return The number of pages.
  */
 - (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(numberOfPages(in:));
 
 @required
 /**
- *  Requests a page view for the page at index.
+ * Requests a page view for the page at index.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of a requested page.
- *  @return The view that conforms to PVOnboardPage protocol.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The view that conforms to PVOnboardPage protocol.
  */
 - (nonnull UIView *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index NS_SWIFT_NAME(onboardView(_:viewForPageAtIndex:));
 
 @optional
 /**
- *  Requests a visible state for the right action button for page at index.
+ * Requests a visible state for the right action button for page at index.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of a requested page.
- *  @return Return YES if a action button should be visible or NO if shouldn't.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return Return YES if a action button should be visible or NO if shouldn't.
  */
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideRightActionButtonForPageAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Requests a title for the right action button for page at index.
+ * Requests a title for the right action button for page at index.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of a requested page.
- *  @return Return the string that should use as a title.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The string to use as a title for the right action button.
  */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForRightActionButtonAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Requests a visible state for the left action button for page at index.
+ * Requests title edge insets for the right action button for page at index.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of a requested page.
- *  @return Return YES if a action button should be visible or NO if shouldn't.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The edge insets to use as the title edge insets for the right
+ * action button.
+ */
+- (UIEdgeInsets)onboardView:(nonnull PVOnboardView *)onboardView titleEdgeInsetsForRightActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests an image for the right action button for page at index.
+ *
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The image to use as the image for the right action button.
+ */
+- (nullable UIImage *)onboardView:(nonnull PVOnboardView *)onboardView imageForRightActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests image edge insets for the right action button for page at index.
+ *
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The edge insets to use as the image edge insets for the right
+ * action button.
+ */
+- (UIEdgeInsets)onboardView:(nonnull PVOnboardView *)onboardView imageEdgeInsetsForRightActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests a visible state for the left action button for page at index.
+ *
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return Return YES if a action button should be visible or NO if shouldn't.
  */
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideLeftActionButtonForPageAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Requests a title for the left action button for page at index.
+ * Requests a title for the left action button for page at index.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of a requested page.
- *  @return Return the string that should use as a title.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return Return the string that should use as a title.
  */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Requests a bottom padding for the footer view. Default is 0.
+ * Requests title edge insets for the left action button for page at index.
  *
- *  @param onboardView The current onboardView.
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The edge insets to use as the title edge insets for the left
+ * action button.
+ */
+- (UIEdgeInsets)onboardView:(nonnull PVOnboardView *)onboardView titleEdgeInsetsForLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests an image for the left action button for page at index.
+ *
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The image to use as the image for the left action button.
+ */
+- (nullable UIImage *)onboardView:(nonnull PVOnboardView *)onboardView imageForLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests image edge insets for the left action button for page at index.
+ *
+ * @param onboardView The current onboardView.
+ * @param index The index of a requested page.
+ * @return The edge insets to use as the image edge insets for the left
+ * action button.
+ */
+- (UIEdgeInsets)onboardView:(nonnull PVOnboardView *)onboardView imageEdgeInsetsForLeftActionButtonAtIndex:(NSInteger)index;
+
+@optional
+/**
+ * Requests a bottom padding for the footer view. Default is 0.
+ *
+ * @param onboardView The current onboardView.
+ * @return The padding to use as the footer view bottom padding.
  */
 - (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(onboardViewFooterBottomPadding(paddingForPageAtIndex:));
 
 @end
 
 /**
- *  The PVOnboardView delegate protocol
+ * The PVOnboardView delegate protocol
  */
 NS_SWIFT_NAME(OnboardViewDelegate)
 @protocol PVOnboardViewDelegate <NSObject>
 
 @optional
 /**
- *  Invoked after a user did touch on the left action button.
+ * Invoked after a user did touch on the left action button.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of the page.
+ * @param onboardView The current onboardView.
+ * @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
 
 @optional
 /**
- *  Invoked after a user did touch on the right action button.
+ * Invoked after a user did touch on the right action button.
  *
- *  @param onboardView The current onboardView.
- *  @param index The index of the page.
+ * @param onboardView The current onboardView.
+ * @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 

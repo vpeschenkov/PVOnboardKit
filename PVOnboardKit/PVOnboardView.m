@@ -314,8 +314,26 @@
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:titleForLeftActionButtonAtIndex:)]) {
         NSString *title = [self.dataSource onboardView:self titleForLeftActionButtonAtIndex:index];
-        [self setUpdateActionButton:self.footerView.leftActionButton
-                          withTitle:title];
+        [self setUpActionButton:self.footerView.leftActionButton
+                      withTitle:title];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:titleEdgeInsetsForLeftActionButtonAtIndex:)]) {
+        UIEdgeInsets edgeInsets = [self.dataSource onboardView:self titleEdgeInsetsForLeftActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+            withTitleEdgeInsets:edgeInsets];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:imageForLeftActionButtonAtIndex:)]) {
+        UIImage *image = [self.dataSource onboardView:self imageForLeftActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+                      withImage:image];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:imageEdgeInsetsForLeftActionButtonAtIndex:)]) {
+        UIEdgeInsets edgeInsets = [self.dataSource onboardView:self imageEdgeInsetsForLeftActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+            withImageEdgeInsets:edgeInsets];
     }
 }
 
@@ -327,19 +345,55 @@
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:titleForRightActionButtonAtIndex:)]) {
         NSString *title = [self.dataSource onboardView:self titleForRightActionButtonAtIndex:index];
-        [self setUpdateActionButton:self.footerView.rightActionButton
-                          withTitle:title];
+        [self setUpActionButton:self.footerView.rightActionButton
+                      withTitle:title];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:titleEdgeInsetsForRightActionButtonAtIndex:)]) {
+        UIEdgeInsets edgeInsets = [self.dataSource onboardView:self titleEdgeInsetsForRightActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+            withTitleEdgeInsets:edgeInsets];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:imageForRightActionButtonAtIndex:)]) {
+        UIImage *image = [self.dataSource onboardView:self imageForRightActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+                      withImage:image];
+    }
+    
+    if ([self.dataSource respondsToSelector:@selector(onboardView:imageEdgeInsetsForRightActionButtonAtIndex:)]) {
+        UIEdgeInsets edgeInsets = [self.dataSource onboardView:self imageEdgeInsetsForRightActionButtonAtIndex:index];
+        [self setUpActionButton:self.footerView.rightActionButton
+            withImageEdgeInsets:edgeInsets];
     }
 }
 
-
-- (void)setUpdateActionButton:(UIButton *)actionButton
-                    withTitle:(NSString *)title {
+- (void)setUpActionButton:(UIButton *)actionButton
+                withTitle:(NSString *)title {
     [actionButton setTitle:title forState:UIControlStateNormal];
     [actionButton setTitle:title forState:UIControlStateHighlighted];
     [actionButton setTitle:title forState:UIControlStateDisabled];
     [actionButton setTitle:title forState:UIControlStateSelected];
     [actionButton setTitle:title forState:UIControlStateFocused];
+}
+
+- (void)setUpActionButton:(UIButton *)actionButton
+      withTitleEdgeInsets:(UIEdgeInsets)edgeInsets {
+    actionButton.titleEdgeInsets = edgeInsets;
+}
+
+- (void)setUpActionButton:(UIButton *)actionButton
+                withImage:(UIImage *)image {
+    [actionButton setImage:image forState:UIControlStateNormal];
+    [actionButton setImage:image forState:UIControlStateHighlighted];
+    [actionButton setImage:image forState:UIControlStateDisabled];
+    [actionButton setImage:image forState:UIControlStateSelected];
+    [actionButton setImage:image forState:UIControlStateFocused];
+}
+
+- (void)setUpActionButton:(UIButton *)actionButton
+      withImageEdgeInsets:(UIEdgeInsets)edgeInsets {
+    actionButton.imageEdgeInsets = edgeInsets;
 }
 
 @end

@@ -72,7 +72,7 @@ NS_SWIFT_NAME(OnboardFooterViewDelegate)
  * Invoked just after a touch-up event in the left action button where the
  * finger is inside the bounds of the control.
  *
- * @param footerView The own instance of PVOnboardFooterView..
+ * @param footerView The own instance of PVOnboardFooterView.
  */
 - (void)footerViewdidTouchLeftActionButton:(nonnull PVOnboardFooterView *)footerView;
 
@@ -81,7 +81,7 @@ NS_SWIFT_NAME(OnboardFooterViewDelegate)
  * Invoked just after a touch-up event in the right action button where the
  * finger is inside the bounds of the control.
  *
- * @param footerView The own instance of PVOnboardFooterView..
+ * @param footerView The own instance of PVOnboardFooterView.
  */
 - (void)footerViewdidTouchRightActionButton:(nonnull PVOnboardFooterView *)footerView;
 
