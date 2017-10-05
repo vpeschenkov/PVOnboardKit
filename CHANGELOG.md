@@ -8,7 +8,7 @@
 ### Fixed for any bug fixes.
 ```
 
-## 1.0.0
+## 1.0.1
 
 ### Improvements
 - Fix typos
