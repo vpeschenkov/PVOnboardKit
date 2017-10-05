@@ -8,6 +8,15 @@
 ### Fixed for any bug fixes.
 ```
 
+## 1.1.1
+### Added
+- Added optional ```-(UIEdgeInsets)onboardView:titleEdgeInsetsForLeftActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+- Added optional ```-(nullable UIImage *)onboardView:imageForLeftActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+- Added optional ```-(UIEdgeInsets)onboardView:imageEdgeInsetsForLeftActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+- Added optional ```-(UIEdgeInsets)onboardView:titleEdgeInsetsForRightActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+- Added optional ```-(nullable UIImage *)onboardView:imageForRightActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+- Added optional ```-(UIEdgeInsets)onboardView:imageEdgeInsetsForRightActionButtonAtIndex:``` method to ```PVOnboardViewDataSource```
+
 ## 1.1.0
 ### Added
 - Added ```-(instancetype)initWithFooterView:``` method to ```PVOnboardView```
