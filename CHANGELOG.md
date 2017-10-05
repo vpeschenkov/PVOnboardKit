@@ -11,7 +11,6 @@
 ## 1.0.0
 
 ### Changed
-- Changed Swift version to Swift 4.
 - Renamed ```- (void)scrollToTheNextPage:animated``` to ```- (void)scrollToNextPage:animated```.
 - Renamed ```- (void)scrollToThePreviouslyPage:animated``` to ```- (void)scrollToPreviouslyPage:animated```.
 
