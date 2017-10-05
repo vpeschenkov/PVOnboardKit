@@ -2,7 +2,7 @@
 
 ![][10] ![][11] ![][12]
 
-PVOnboardKit is framework what allows you adding your own tutorial into your app, as easy as possible. As main concept uses [**UITableView**][1]. Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
+PVOnboardKit is framework that allows you adding your own tutorial into your app, as easy as possible. As main concept uses [**UITableView**][1]. Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
 
 ![Demo!](http://i.imgur.com/yvcI91a.gif)
 
