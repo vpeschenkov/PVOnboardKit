@@ -8,6 +8,14 @@
 ### Fixed for any bug fixes.
 ```
 
+## 1.1.0
+### Added
+- Added ```-(instancetype)initWithFooterView:``` method to ```PVOnboardView```
+
+### Improvements
+- Made ```PVOnboardPage``` protocol optional
+- Made ```PVOnboardFooterView``` public
+
 ## 1.0.1
 
 ### Improvements
