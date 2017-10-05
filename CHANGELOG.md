@@ -10,23 +10,26 @@
 
 ## 1.0.0
 
+### Improvements
+- Fix typos
+
+## 1.0.0
+
 ### Changed
-- Renamed ```- (void)scrollToTheNextPage:animated``` to ```- (void)scrollToNextPage:animated```.
-- Renamed ```- (void)scrollToThePreviouslyPage:animated``` to ```- (void)scrollToPreviouslyPage:animated```.
+- Renamed ```- (void)scrollToTheNextPage:animated``` to ```- (void)scrollToNextPage:animated```
+- Renamed ```- (void)scrollToThePreviouslyPage:animated``` to ```- (void)scrollToPreviouslyPage:animated```
 
 ### Improvements
-- Improved compatibility with Swift.
+- Improved compatibility with Swift
 
 ## 0.2.0
 
 ### Added
-- Added an example on Swift.
-- Added an example on Objective-C.
-- Added ```- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView``` to ```PVOnboardViewDataSource``` to allow setting the bottom padding for footer view.
+- Added an example on Swift
+- Added an example on Objective-C
+- Added ```- (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView``` to ```PVOnboardViewDataSource``` to allow setting the bottom padding for footer view
 
 ### Improvements
-- Extracted bottom control panel into ```PVOnboardFooterView``` class.
-
-# Add an existing project to GitHub.
+- Extracted bottom control panel into ```PVOnboardFooterView``` class
 
 ## 0.1.0
