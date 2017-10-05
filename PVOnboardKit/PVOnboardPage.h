@@ -28,7 +28,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * The PVOnboardPage protocol.
+ * The PVOnboardPage protocol. You'd implement this protocol if you want
+ * processing the show/hide content events.
  */
 NS_SWIFT_NAME(OnboardPage)
 @protocol PVOnboardPage <NSObject>

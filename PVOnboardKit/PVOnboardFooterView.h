@@ -24,8 +24,7 @@
  */
 
 @import UIKit;
-
-@class TAPageControl;
+@import TAPageControl;
 
 @protocol PVOnboardFooterViewDelegate;
 

@@ -37,7 +37,7 @@
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
-@property (nonatomic, strong) NSMutableArray<UIView<PVOnboardPage> *> *views;
+@property (nonatomic, strong) NSMutableArray<UIView *> *views;
 
 @property (nonatomic, readonly) CGFloat footerBottomPadding;
 
@@ -50,7 +50,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self initViews];
+        [self initViewsWithFooterView:nil];
     }
     return self;
 }
@@ -58,7 +58,15 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self initViews];
+        [self initViewsWithFooterView:nil];
+    }
+    return self;
+}
+
+- (instancetype)initWithFooterView:(PVOnboardFooterView *)footerView {
+    self = [super init];
+    if (self) {
+        [self initViewsWithFooterView:footerView];
     }
     return self;
 }
@@ -94,27 +102,39 @@
     NSUInteger currentPageIndex = self.footerView.pageControl.currentPage;
     NSUInteger nextPageIndex = round(scrollView.contentOffset.x / scrollView.bounds.size.width);
     if (nextPageIndex != currentPageIndex) {
-        UIView<PVOnboardPage> *currentPageView = self.views[currentPageIndex];
-        UIView<PVOnboardPage> *nextPageView = self.views[nextPageIndex];
+        UIView *currentPageView = self.views[currentPageIndex];
+        UIView *nextPageView = self.views[nextPageIndex];
         
-        if ([currentPageView respondsToSelector:@selector(willContentHide)]) {
-            [currentPageView willContentHide];
+        if ([currentPageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+            UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)currentPageView;
+            if ([page respondsToSelector:@selector(willContentHide)]) {
+                [page willContentHide];
+            }
         }
         
-        if ([nextPageView respondsToSelector:@selector(willContentShow)]) {
-            [nextPageView willContentShow];
+        if ([nextPageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+            UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)nextPageView;
+            if ([page respondsToSelector:@selector(willContentShow)]) {
+                [page willContentShow];
+            }
         }
         
         [self setUpActionButtonsWithIndex:nextPageIndex];
         
         self.footerView.pageControl.currentPage = nextPageIndex;
         
-        if ([currentPageView respondsToSelector:@selector(didContentHide)]) {
-            [currentPageView didContentHide];
+        if ([currentPageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+            UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)currentPageView;
+            if ([page respondsToSelector:@selector(didContentHide)]) {
+                [page didContentHide];
+            }
         }
         
-        if ([nextPageView respondsToSelector:@selector(didContentShow)]) {
-            [nextPageView didContentShow];
+        if ([nextPageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+            UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)nextPageView;
+            if ([page respondsToSelector:@selector(didContentShow)]) {
+                [page didContentShow];
+            }
         }
         
         [self setNeedsLayout];
@@ -146,15 +166,22 @@
     }
     
     NSUInteger pageIndex = self.footerView.pageControl.currentPage;
-    UIView<PVOnboardPage> *pageView = self.views[pageIndex];
-    if ([pageView respondsToSelector:@selector(willContentShow)]) {
-        [pageView willContentShow];
+    UIView *pageView = self.views[pageIndex];
+    
+    if ([pageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+        UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)pageView;
+        if ([page respondsToSelector:@selector(willContentShow)]) {
+            [page willContentShow];
+        }
     }
     
     [self setUpActionButtonsWithIndex:pageIndex];
     
-    if ([pageView respondsToSelector:@selector(didContentShow)]) {
-        [pageView didContentShow];
+    if ([pageView conformsToProtocol:@protocol(PVOnboardPage)]) {
+        UIView<PVOnboardPage> *page = (UIView<PVOnboardPage> *)pageView;
+        if ([page respondsToSelector:@selector(didContentShow)]) {
+            [page didContentShow];
+        }
     }
     
     self.footerView.pageControl.numberOfPages = numberOfPagesInOneboardView;
@@ -242,7 +269,7 @@
 
 #pragma mark - Private Methods
 
-- (void)initViews {
+- (void)initViewsWithFooterView:(PVOnboardFooterView *)footerView {
     _views = [[NSMutableArray alloc] init];
     
     _backgroundImageView = [[UIImageView alloc] init];
@@ -255,7 +282,7 @@
     _scrollView.delegate = self;
     [self addSubview:_scrollView];
     
-    _footerView = [[PVOnboardFooterView alloc] init];
+    _footerView = footerView ? footerView : [[PVOnboardFooterView alloc] init];
     _footerView.delegate = self;
     [self addSubview:_footerView];
 }

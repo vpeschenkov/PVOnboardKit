@@ -27,7 +27,7 @@
 import UIKit
 import PVOnboardKit
 
-class IntroPage: UIView, OnboardPage {
+class IntroPage: UIView {
     public var title: String! {
         get {
             return titleLabel.text

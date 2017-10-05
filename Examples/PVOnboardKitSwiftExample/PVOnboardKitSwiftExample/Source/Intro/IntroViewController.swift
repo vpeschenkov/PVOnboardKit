@@ -88,7 +88,7 @@ extension IntroViewController: OnboardViewDataSource {
         return model.numberOfPages()
     }
 
-    func onboardView(_ onboardView: OnboardView, viewForPageAtIndex index: Int) -> UIView & OnboardPage {
+    func onboardView(_ onboardView: OnboardView, viewForPageAtIndex index: Int) -> UIView {
         let pageModel = model.pageModel(forPageAtIndex: index)
         
         let page = IntroPage()

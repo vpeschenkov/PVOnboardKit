@@ -29,7 +29,7 @@
 @protocol PVOnboardViewDelegate;
 @protocol PVOnboardViewDataSource;
 
-@class TAPageControl;
+@class PVOnboardFooterView;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -91,6 +91,14 @@ NS_SWIFT_NAME(OnboardView)
 @property (nonatomic, assign) UIViewContentMode backgroundImageContentMode;
 
 /**
+ * Initializes and returns a newly allocated onboard view object with the
+ * specified footer view.
+ * @param footerView Your implementation of footer view.
+ * @return An initialized onboard view object.
+ */
+- (instancetype)initWithFooterView:(PVOnboardFooterView *)footerView;
+
+/**
  * Scrolls to the next page.
  * @param animated The flag that indicate about an animation while scrolling.
  */
@@ -144,7 +152,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
  *  @param index The index of a requested page.
  *  @return The view that conforms to PVOnboardPage protocol.
  */
-- (nonnull UIView<PVOnboardPage> *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index NS_SWIFT_NAME(onboardView(_:viewForPageAtIndex:));
+- (nonnull UIView *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index NS_SWIFT_NAME(onboardView(_:viewForPageAtIndex:));
 
 @optional
 /**

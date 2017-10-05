@@ -33,3 +33,4 @@ FOUNDATION_EXPORT const unsigned char PVOnboardKitVersionString[];
 
 #import <PVOnboardKit/PVOnboardView.h>
 #import <PVOnboardKit/PVOnboardPage.h>
+#import <PVOnboardKit/PVOnboardFooterView.h>
