@@ -2,16 +2,12 @@
 
 ![][10] ![][11] ![][12]
 
+PVOnboardKit is framework what allows you adding your own tutorial into your app, as easy as possible. As main concept uses [**UITableView**][1]. Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
+
 ![Demo!](http://i.imgur.com/yvcI91a.gif)
 
-Make an app tutorial **as easy as possible**!
-
-**PVOnboardKit** allows to make an tutorial for you app, **as easy as possible**. As main concept uses [**UITableView**][1]. 
-
-Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
-
 # Requirements
-Xcode 9. Ready for use on iOS 9+
+Xcode 9. Ready for use on iOS 8+
 
 # Install
 Adding the following to your Podfile and running pod install should do the trick:
@@ -23,7 +19,7 @@ pod 'PVOnboardKit'
 1. Create [PVOnboardView][7] and add to your view
 1. Implement [PVOnboardViewDelegate][8] and [PVOnboardViewDataSource][9] and assign to instance of [PVOnboardView][7]
 1. Call reloadData from instance of [PVOnboardView][7]
-1. Enjoy😎❕
+1. Enjoy 😎
 
 # Thanks
 
@@ -31,7 +27,7 @@ Thank @TanguyAladenise for [**TAPageControl**][3].
 
 # Community
 
-Questions, comments, issues, and pull requests are always welcome😄❕
+Questions, comments, issues, and pull requests are always welcome!
 
 # License
 
