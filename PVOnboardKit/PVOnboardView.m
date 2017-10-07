@@ -320,19 +320,19 @@
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:titleEdgeInsetsForLeftActionButtonAtIndex:)]) {
         UIEdgeInsets edgeInsets = [self.dataSource onboardView:self titleEdgeInsetsForLeftActionButtonAtIndex:index];
-        [self setUpActionButton:self.footerView.rightActionButton
+        [self setUpActionButton:self.footerView.leftActionButton
             withTitleEdgeInsets:edgeInsets];
     }
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:imageForLeftActionButtonAtIndex:)]) {
         UIImage *image = [self.dataSource onboardView:self imageForLeftActionButtonAtIndex:index];
-        [self setUpActionButton:self.footerView.rightActionButton
+        [self setUpActionButton:self.footerView.leftActionButton
                       withImage:image];
     }
     
     if ([self.dataSource respondsToSelector:@selector(onboardView:imageEdgeInsetsForLeftActionButtonAtIndex:)]) {
         UIEdgeInsets edgeInsets = [self.dataSource onboardView:self imageEdgeInsetsForLeftActionButtonAtIndex:index];
-        [self setUpActionButton:self.footerView.rightActionButton
+        [self setUpActionButton:self.footerView.leftActionButton
             withImageEdgeInsets:edgeInsets];
     }
 }

@@ -1,8 +1,14 @@
 osx_image: xcode9
 language: objective-c
 
+env:
+  - PROJECT_NAME=PVOnboardKitExample
+    PROJECT_SCHEME=PVOnboardKitExample
+    PROJECT_DIRECTORY=Examples/PVOnboardKitExample
+  - PROJECT_NAME=PVOnboardKitSwiftExample
+    PROJECT_SCHEME=PVOnboardKitSwiftExample
+    PROJECT_DIRECTORY=Examples/PVOnboardKitSwiftExample
+
 script: 
-    - pod --project-directory=Examples/PVOnboardKitExample/ install
-    - xcodebuild -workspace Examples/PVOnboardKitExample/PVOnboardKitExample.xcworkspace -sdk iphonesimulator -scheme PVOnboardKitExample build
-    - pod --project-directory=Examples/PVOnboardKitSwiftExample/ install
-    - xcodebuild -workspace Examples/PVOnboardKitSwiftExample/PVOnboardKitSwiftExample.xcworkspace -sdk iphonesimulator -scheme PVOnboardKitSwiftExample build
+    - pod --project-directory=$PROJECT_DIRECTORY install
+    - xcodebuild -workspace $PROJECT_DIRECTORY/$PROJECT_NAME.xcworkspace -sdk iphonesimulator -scheme $PROJECT_SCHEME build | xcpretty -s

@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT' }
   s.homepage         = 'https://github.com/vpeschenkov/PVOnboardKit.git'
   s.authors          = { 'Victor Peschenkov' => 'nerevarxx@gmail.com' }
-  s.summary          = 'Framework which allows you adding your own tutorial into your app.'
+  s.summary          = 'PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tutorial into your app.'
   s.source           = { :git => 'https://github.com/vpeschenkov/PVOnboardKit.git', :tag => s.version.to_s }
   s.source_files     = 'PVOnboardKit/{PV}*.{h,m}'
   s.requires_arc     = true

@@ -139,7 +139,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a number of pages in current onboardView.
  *
- * @param onboardView The current onboardView.
+ * @param onboardView The onboard-view object asking for number of pages.
  * @return The number of pages.
  */
 - (NSInteger)numberOfPagesInOneboardView:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(numberOfPages(in:));
@@ -148,8 +148,8 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a page view for the page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the view.
+ * @param index An index of a requested page.
  * @return The view that conforms to PVOnboardPage protocol.
  */
 - (nonnull UIView *)onboardView:(nonnull PVOnboardView *)onboardView viewForPageAtIndex:(NSInteger)index NS_SWIFT_NAME(onboardView(_:viewForPageAtIndex:));
@@ -158,8 +158,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a visible state for the right action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the right button
+ * visible state.
+ * @param index An index of a requested page.
  * @return Return YES if a action button should be visible or NO if shouldn't.
  */
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideRightActionButtonForPageAtIndex:(NSInteger)index;
@@ -168,8 +169,8 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a title for the right action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the right button title.
+ * @param index An index of a requested page.
  * @return The string to use as a title for the right action button.
  */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForRightActionButtonAtIndex:(NSInteger)index;
@@ -178,8 +179,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests title edge insets for the right action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the right button edge
+ * insets.
+ * @param index An index of a requested page.
  * @return The edge insets to use as the title edge insets for the right
  * action button.
  */
@@ -189,8 +191,8 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests an image for the right action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the right button image.
+ * @param index An index of a requested page.
  * @return The image to use as the image for the right action button.
  */
 - (nullable UIImage *)onboardView:(nonnull PVOnboardView *)onboardView imageForRightActionButtonAtIndex:(NSInteger)index;
@@ -199,8 +201,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests image edge insets for the right action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the right button image
+ * edge insets.
+ * @param index An index of a requested page.
  * @return The edge insets to use as the image edge insets for the right
  * action button.
  */
@@ -210,8 +213,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a visible state for the left action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the left button
+ * visible state.
+ * @param index An index of a requested page.
  * @return Return YES if a action button should be visible or NO if shouldn't.
  */
 - (BOOL)onboardView:(nonnull PVOnboardView *)onboardView shouldHideLeftActionButtonForPageAtIndex:(NSInteger)index;
@@ -220,8 +224,8 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a title for the left action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the left button title.
+ * @param index An index of a requested page.
  * @return Return the string that should use as a title.
  */
 - (nullable NSString *)onboardView:(nonnull PVOnboardView *)onboardView titleForLeftActionButtonAtIndex:(NSInteger)index;
@@ -230,8 +234,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests title edge insets for the left action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the left button edge
+ * insets.
+ * @param index An index of a requested page.
  * @return The edge insets to use as the title edge insets for the left
  * action button.
  */
@@ -241,8 +246,8 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests an image for the left action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the left button image.
+ * @param index An index of a requested page.
  * @return The image to use as the image for the left action button.
  */
 - (nullable UIImage *)onboardView:(nonnull PVOnboardView *)onboardView imageForLeftActionButtonAtIndex:(NSInteger)index;
@@ -251,8 +256,9 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests image edge insets for the left action button for page at index.
  *
- * @param onboardView The current onboardView.
- * @param index The index of a requested page.
+ * @param onboardView The onboard-view object asking for the left button image
+ * edge insets.
+ * @param index An index of a requested page.
  * @return The edge insets to use as the image edge insets for the left
  * action button.
  */
@@ -262,7 +268,7 @@ NS_SWIFT_NAME(OnboardViewDataSource)
 /**
  * Requests a bottom padding for the footer view. Default is 0.
  *
- * @param onboardView The current onboardView.
+ * @param onboardView The onboardView.
  * @return The padding to use as the footer view bottom padding.
  */
 - (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(onboardViewFooterBottomPadding(paddingForPageAtIndex:));
@@ -279,7 +285,7 @@ NS_SWIFT_NAME(OnboardViewDelegate)
 /**
  * Invoked after a user did touch on the left action button.
  *
- * @param onboardView The current onboardView.
+ * @param onboardView The onboardView.
  * @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnLeftActionButtonAtIndex:(NSInteger)index;
@@ -288,7 +294,7 @@ NS_SWIFT_NAME(OnboardViewDelegate)
 /**
  * Invoked after a user did touch on the right action button.
  *
- * @param onboardView The current onboardView.
+ * @param onboardView The onboardView.
  * @param index The index of the page.
  */
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
