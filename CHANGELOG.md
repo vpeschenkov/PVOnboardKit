@@ -7,6 +7,9 @@
 ### Removed for deprecated features removed in this release.
 ### Fixed for any bug fixes.
 ```
+## 1.1.2
+### Improvements
+- Fixed mistakes
 
 ## 1.1.1
 ### Added
