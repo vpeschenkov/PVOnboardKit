@@ -21,7 +21,40 @@ pod 'PVOnboardKit'
 1. Call reloadData from instance of [PVOnboardView][7]
 1. Enjoy 😎
 
-# Delegate Methods
+# PVOnboardPage Protocol
+```
+@optional
+/**
+ * Invoked just after transition on the next page.
+ */
+- (void)willContentShow;
+```
+
+```
+/**
+ * Invoked before transition on the next page.
+ */
+@optional
+- (void)didContentShow;
+```
+
+```
+/**
+ * Invoked just after transition on the next page.
+ */
+@optional
+- (void)willContentHide;
+```
+
+```
+/**
+ * Invoked before transition on the next page.
+ */
+@optional
+- (void)didContentHide;
+```
+
+# PVOnboardView Delegate Methods
 ```
 @optional
 /**
@@ -44,7 +77,7 @@ pod 'PVOnboardKit'
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 ```
 
-# DataSource Methods
+# PVOnboardView DataSource Methods
 
 ```
 @required
