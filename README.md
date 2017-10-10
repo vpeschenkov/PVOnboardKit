@@ -2,7 +2,7 @@
 
 ![][1] ![][2] ![][3]
 
-PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tutorial into your app. As main concept uses ```UITableView```. Also, for more customization ```PVOnboardKit``` uses ```TAPageControl``` instead of ```UIPageControl```.
+PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tutorial into your app. As the main concept uses ```UITableView```. Also, for more customization ```PVOnboardKit``` uses ```TAPageControl``` instead of ```UIPageControl```.
 
 ![](http://i.imgur.com/yvcI91a.gif)
 
