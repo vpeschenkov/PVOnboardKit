@@ -4,16 +4,16 @@ PODS:
   - TAPageControl (0.2.0)
 
 DEPENDENCIES:
-  - PVOnboardKit (from `../../`)
+  - PVOnboardKit (from `../`)
 
 EXTERNAL SOURCES:
   PVOnboardKit:
-    :path: ../../
+    :path: ../
 
 SPEC CHECKSUMS:
   PVOnboardKit: 03b219ea35786fbd1ae851534e2b0a63728344b4
   TAPageControl: fd11d779bbb5c2464ca2f55dde9e288213ea8a9b
 
-PODFILE CHECKSUM: ead91d0d8f4a649a310bede9a8e2c9b6a6eff456
+PODFILE CHECKSUM: 2ded7801285606c1f350fd4dd96d7e0b93559d52
 
 COCOAPODS: 1.2.1
