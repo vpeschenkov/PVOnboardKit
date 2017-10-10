@@ -1,27 +1,27 @@
 # PVOnboardKit
 
-![][10] ![][11] ![][12]
+![][1] ![][2] ![][3]
 
-PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tutorial into your app. As main concept uses [**UITableView**][1]. Also, for more customization [**PVOnboardKit**][2] uses [**TAPageControl**][3] instead of [**UIPageControl**][4].
+PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tutorial into your app. As main concept uses ```UITableView```. Also, for more customization ```PVOnboardKit``` uses ```TAPageControl``` instead of ```UIPageControl```.
 
-![Demo!](http://i.imgur.com/yvcI91a.gif)
+![](http://i.imgur.com/yvcI91a.gif)
 
-# Requirements
-Xcode 9. Ready for use on iOS 8+
+## Requirements
+- iOS 8 and later
 
-# Install
-Adding the following to your Podfile and running pod install should do the trick:
+## Install
+To install PVOnboardKit using CocoaPods, add this line to your Podfile:
 ```
 pod 'PVOnboardKit'
 ```
 
-1. Import [PVOnboardKit][2]
-1. Create [PVOnboardView][7] and add to your view
-1. Implement [PVOnboardViewDelegate][8] and [PVOnboardViewDataSource][9] and assign to instance of [PVOnboardView][7]
-1. Call reloadData from instance of [PVOnboardView][7]
+1. Import ```PVOnboardKit```
+1. Create ```PVOnboardView``` and add to your view
+1. Implement ```PVOnboardViewDelegate``` and ```PVOnboardViewDataSource``` and assign to instance of ```PVOnboardView```
+1. Call reloadData from instance of ```PVOnboardView```
 1. Enjoy 😎
 
-# PVOnboardPage Protocol
+## PVOnboardPage Protocol
 ```
 @optional
 /**
@@ -54,7 +54,7 @@ pod 'PVOnboardKit'
 - (void)didContentHide;
 ```
 
-# PVOnboardView Delegate Methods
+## PVOnboardView Delegate Methods
 ```
 @optional
 /**
@@ -77,7 +77,7 @@ pod 'PVOnboardKit'
 - (void)onboardView:(nonnull PVOnboardView *)onboardView didTouchOnRightActionButtonAtIndex:(NSInteger)index;
 ```
 
-# PVOnboardView DataSource Methods
+## PVOnboardView DataSource Methods
 
 ```
 @required
@@ -243,27 +243,18 @@ pod 'PVOnboardKit'
 - (CGFloat)onboardViewFooterBottomPadding:(nonnull PVOnboardView *)onboardView NS_SWIFT_NAME(onboardViewFooterBottomPadding(paddingForPageAtIndex:));
 ```
 
-# Thanks
+## Thanks
 
-Thank @TanguyAladenise for [**TAPageControl**][3].
+Thank @TanguyAladenise for ```TAPageControl```.
 
-# Community
+## Community
 
 Questions, comments, issues, and pull requests are always welcome!
 
-# License
+## License
 
 Distributed under the MIT license. See LICENSE for more information.
 
-[1]: https://developer.apple.com/reference/uikit/uitableview
-[2]: https://github.com/vpeschenkov/PVOnboardKit
-[3]: https://github.com/TanguyAladenise/TAPageControl
-[4]: https://developer.apple.com/reference/uikit/uipagecontrol
-[5]: https://github.com/CocoaPods/Specs
-[6]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardPage.h
-[7]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L44
-[8]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L125
-[9]: https://github.com/vpeschenkov/PVOnboardKit/blob/master/PVOnboardKit/PVOnboardView.h#L150
-[10]: https://travis-ci.org/vpeschenkov/PVOnboardKit.svg?branch=master
-[11]: https://cocoapod-badges.herokuapp.com/v/PVOnboardKit/badge.png
-[12]: https://cocoapod-badges.herokuapp.com/p/PVOnboardKit/badge.png
+[1]: https://travis-ci.org/vpeschenkov/PVOnboardKit.svg?branch=master
+[2]: https://cocoapod-badges.herokuapp.com/v/PVOnboardKit/badge.png
+[3]: https://cocoapod-badges.herokuapp.com/p/PVOnboardKit/badge.png
