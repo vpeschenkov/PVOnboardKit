@@ -4,10 +4,10 @@ language: objective-c
 env:
   - PROJECT_NAME=PVOnboardKitExample
     PROJECT_SCHEME=PVOnboardKitExample
-    PROJECT_DIRECTORY=Examples/PVOnboardKitExample
+    PROJECT_DIRECTORY=PVOnboardKitExample
   - PROJECT_NAME=PVOnboardKitSwiftExample
     PROJECT_SCHEME=PVOnboardKitSwiftExample
-    PROJECT_DIRECTORY=Examples/PVOnboardKitSwiftExample
+    PROJECT_DIRECTORY=PVOnboardKitSwiftExample
 
 script: 
     - pod --project-directory=$PROJECT_DIRECTORY install
