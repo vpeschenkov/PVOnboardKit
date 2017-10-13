@@ -245,7 +245,7 @@ pod 'PVOnboardKit'
 
 ## Thanks
 
-Thank @TanguyAladenise for ```TAPageControl```.
+Thanks @TanguyAladenise for ```TAPageControl```.
 
 ## Community
 
