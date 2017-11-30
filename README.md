@@ -9,7 +9,7 @@ PVOnboardKit is a framework that allows you to add your own walkthrough/intro/tu
 ## Requirements
 - iOS 8 and later
 
-## Install
+## Installation
 To install PVOnboardKit using CocoaPods, add this line to your Podfile:
 ```
 pod 'PVOnboardKit'
