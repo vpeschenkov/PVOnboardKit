@@ -101,7 +101,7 @@
     
     NSUInteger currentPageIndex = self.footerView.pageControl.currentPage;
     NSUInteger nextPageIndex = round(scrollView.contentOffset.x / scrollView.bounds.size.width);
-    if (nextPageIndex != currentPageIndex) {
+    if (nextPageIndex != currentPageIndex && nextPageIndex < self.views.count) {
         UIView *currentPageView = self.views[currentPageIndex];
         UIView *nextPageView = self.views[nextPageIndex];
         
