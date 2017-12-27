@@ -7,6 +7,10 @@
 ### Removed for deprecated features removed in this release.
 ### Fixed for any bug fixes.
 ```
+## 1.1.3
+### Fixed
+- Crash when swiping left on the last screen [#3](https://github.com/vpeschenkov/PVOnboardKit/issues/3)
+
 ## 1.1.2
 ### Improvements
 - Fixed mistakes

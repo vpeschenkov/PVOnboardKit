@@ -374,7 +374,6 @@
     [actionButton setTitle:title forState:UIControlStateHighlighted];
     [actionButton setTitle:title forState:UIControlStateDisabled];
     [actionButton setTitle:title forState:UIControlStateSelected];
-    [actionButton setTitle:title forState:UIControlStateFocused];
 }
 
 - (void)setUpActionButton:(UIButton *)actionButton
@@ -388,7 +387,6 @@
     [actionButton setImage:image forState:UIControlStateHighlighted];
     [actionButton setImage:image forState:UIControlStateDisabled];
     [actionButton setImage:image forState:UIControlStateSelected];
-    [actionButton setImage:image forState:UIControlStateFocused];
 }
 
 - (void)setUpActionButton:(UIButton *)actionButton

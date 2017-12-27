@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'PVOnboardKit'
   s.platform         = :ios, '8.0'
-  s.version          = '1.1.2'
+  s.version          = '1.1.3'
   s.license          = { :type => 'MIT' }
   s.homepage         = 'https://github.com/vpeschenkov/PVOnboardKit.git'
   s.authors          = { 'Victor Peschenkov' => 'nerevarxx@gmail.com' }
