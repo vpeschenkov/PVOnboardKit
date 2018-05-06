@@ -251,6 +251,11 @@ Thanks @TanguyAladenise for ```TAPageControl```.
 
 Questions, comments, issues, and pull requests are always welcome!
 
+## Contacts
+
+- [GitHub](https://github.com/vpeschenkov)
+- [Twitter](https://twitter.com/vpeschenkov)
+
 ## License
 
 Distributed under the MIT license. See LICENSE for more information.
